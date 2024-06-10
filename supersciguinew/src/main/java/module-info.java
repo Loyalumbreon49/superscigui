@@ -5,4 +5,10 @@ module supersci.gui {
 
     opens supersci.gui to javafx.fxml;
     exports supersci.gui;
+
+    opens controllers to javafx.fxml;
+    exports controllers;
+
+    opens model to javafx.fxml;
+    exports model;
 }
