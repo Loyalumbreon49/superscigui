@@ -1,0 +1,93 @@
+[
+{
+    "subject": "Math",
+    "name": "Robin",
+    "weapons": [{
+        "weaponName": "grappling hook",
+        "effect": "move"
+    },
+    {
+        "weaponName": "battle staff",
+        "effect": "strength"
+    },
+    {
+        "weaponName": "birdarangs",
+        "effect": "intel"
+    }],
+    "strength": 2,
+    "story": "Robin is like a child to Batman and leads the Teen Titans."
+},
+{
+    "subject": "Riddles",
+    "name" : "Scarlett Witch",
+    "weapons":[{
+        "weaponName": "magic ability",
+        "effect": "move"
+    },
+    {
+        "weaponName": "the darkhold",
+        "effect": "intel"
+    },
+    {
+        "weaponName": "hex bolt",
+        "effect": "strength"
+    }],
+    "strength": 2,
+    "story": "Scarlett Witch, also known as Wanda Maximoff, got her magic powers from an infinity stone."
+},
+{
+    "subject": "Science",
+    "name": "Wonder Woman",
+    "weapons": [{
+        "weaponName": "lasso",
+        "effect": "intel"
+    },
+    {
+        "weaponName": "sheild",
+        "effect": "strength"
+    },
+    {
+        "weaponName": "bracelets",
+        "effect": "move"
+    }],
+    "strength": 2,
+    "story": "Wonder Woman was molded from clay by her mother, and given life by Zeus."
+
+},
+{
+    "subject": "English",
+    "name": "Deadpool",
+    "weapons":[{
+        "weaponName":"katana",
+        "effect" : "strength"
+    },
+    {
+        "weaponName": "handgun",
+        "effect": "intel"
+    },
+    {
+        "weaponName": "submachine guns",
+        "effect": "move"
+    }],
+    "strength": 2,
+    "story": "Deadpool, also known as Wade Wilson, was given a serum that activated his mutant abilities."
+},
+{
+    "subject": "Social Studies",
+    "name": "Batman",
+    "weapons":[{
+        "weaponName": "batclaw",
+        "effect": "move"
+    },
+    {
+        "weaponName": "batarang",
+        "effect": "strength"
+    },
+    {
+        "weaponName": "batlight",
+        "effect": "intel"
+    }],
+    "strength": 2,
+    "story": "Batman, also known as Bruce Wayne, saw his parents killed as a boy and is now the most notable vigilante in Gotham."
+}
+]

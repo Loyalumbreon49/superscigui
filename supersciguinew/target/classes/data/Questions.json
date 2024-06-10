@@ -1,0 +1,219 @@
+[
+{
+    "difficulty": 1,
+    "subject": "math",
+    "question": "They have a dozen donuts. How many donuts do they have?",
+    "correctAnswer": "12",
+    "answers":["10", "13", "24"]
+},
+{
+    "difficulty": 1,
+    "subject": "math",
+    "question": "What is 46 - 12?",
+    "correctAnswer": "34",
+    "answers": ["44", "58", "23"]
+},
+{
+    "difficulty": 1,
+    "subject": "math",
+    "question": "Which shape has 5 sides?",
+    "correctAnswer": "pentagon",
+    "answers": ["square", "octagon", "triangle"]
+},
+{
+    "difficulty": 2,
+    "subject": "math",
+    "question": "What is 12 x 2?",
+    "correctAnswer": "24",
+    "answers": ["34", "14", "44"]
+},
+{
+    "difficulty": 2,
+    "subject": "math",
+    "question": "What is half of 10?",
+    "correctAnswer": "5",
+    "answers": ["2", "6", "7"]
+},
+{
+    "difficulty": 2,
+    "subject": "math",
+    "question": "What is 4 + 4 + 0?",
+    "correctAnswer": "8",
+    "answers": ["4", "6", "0"]
+},
+{
+    "difficulty": 1,
+    "subject": "riddles",
+    "question": "What can you catch but not throw?",
+    "correctAnswer": "a cold",
+    "answers": ["a ball", "a boomerang", "a sweat"]
+},
+{
+    "difficulty": 1,
+    "subject": "riddles",
+    "question": "What do you call a bear with no teeth?",
+    "correctAnswer": "a gummy bear",
+    "answers": ["a polar bear", "a toothless bear", "a koala bear"]
+},
+{
+    "difficulty": 1,
+    "subject": "riddles",
+    "question": "What do you call a cow in an earthquake?",
+    "correctAnswer": "a milkshake",
+    "answers": ["a cow", "a brown cow", "a chicken"]
+},
+{
+    "difficulty": 2,
+    "subject": "riddles",
+    "question": "What has many rings but no fingers?",
+    "correctAnswer": "a telephone",
+    "answers": ["a jewlery store", "the olympics", "a piano"]
+},
+{
+    "difficulty": 2,
+    "subject": "riddles",
+    "question": "What word begins with E and ends with E, but only has one letter?",
+    "correctAnswer": "an envelope",
+    "answers": ["everyone", "ease", "Europe"]
+},
+{
+    "difficulty": 2,
+    "subject": "riddles",
+    "question": "What goes up but never comes back down?",
+    "correctAnswer": "age",
+    "answers": ["stairs", "elevator", "fireworks"]
+},
+{
+    "difficulty": 1,
+    "subject": "science",
+    "question": "How do plants make food?",
+    "correctAnswer": "photosynthesis",
+    "answers": ["by eating smaller plants", "through their leaves", "plants don't eat"]
+},
+{
+    "difficulty": 1,
+    "subject": "science",
+    "question": "Which of these is NOT a state of matter?",
+    "correctAnswer": "ligth",
+    "answers": ["solid", "liquid", "gas"]
+},
+{
+    "difficulty": 1,
+    "subject": "science",
+    "question": "What color can you mix with red to make purple?",
+    "correctAnswer": "blue",
+    "answers": ["pink", "yellow", "green"]
+},
+{
+    "difficulty": 2,
+    "subject": "science",
+    "question": "What planet is next to earth?",
+    "correctAnswer": "mars",
+    "answers": ["jupiter", "pluto", "saturn"]
+},
+{
+    "difficulty": 2,
+    "subject": "science",
+    "question": "How many states of matter are there?",
+    "correctAnswer": "4",
+    "answers": ["2", "3", "1"]
+},
+{
+    "difficulty": 2,
+    "subject": "science",
+    "question": "Which of these is water",
+    "correctAnswer": "H20",
+    "answers": ["H3", "pluto", "saturn"]
+},
+{
+    "difficulty": 3,
+    "subject": "science",
+    "question": "What is the powerhouse of the cell?",
+    "correctAnswer": "the mitochondria",
+    "answers": ["membrane", "nucleus", "cytoplasm"]
+},
+{
+    "difficulty": 1,
+    "subject": "social studies",
+    "question": "Who was the 1st president?",
+    "correctAnswer": "George Washington",
+    "answers": ["Abraham Lincoln", "Thomas Jefferson", "John Adams"]
+},
+{
+    "difficulty": 1,
+    "subject": "social studies",
+    "question": "When did Christopher Columbus sail the ocean blue?",
+    "correctAnswer": "1492",
+    "answers": ["1490", "1249", "1360"]
+},
+{
+    "difficulty": 1,
+    "subject": "social studies",
+    "question": "Which of these animals are extinct?",
+    "correctAnswer": "dinosaur",
+    "answers": ["tiger", "elephant", "rhino"]
+},
+{
+    "difficulty": 2,
+    "subject": "social studies",
+    "question": "When was the Declaration of Independence signed?",
+    "correctAnswer": "1776",
+    "answers": ["1746", "1767", "1764"]
+},
+{
+    "difficulty": 2,
+    "subject": "social studies",
+    "question": "What are the 10 Amendments called?",
+    "correctAnswer": "Bill of Rights",
+    "answers": ["Constitution", "Declaration of Independence", "Emancipation Proclamation"]
+},
+{
+    "difficulty": 2,
+    "subject": "social studies",
+    "question": "What was the period after the Civil War called?",
+    "correctAnswer": "Reconstruction era",
+    "answers": ["Roaring Twenties", "the Enlightenment", "the Renaissance"]
+},
+{
+    "difficulty": 1,
+    "subject": "english",
+    "question": "Fill in the blank: I _____ shopping yesterday.",
+    "correctAnswer": "went",
+    "answers": ["gone", "go", "going"]
+},
+{
+    "difficulty": 1,
+    "subject": "english",
+    "question": "What letter comes before \"k\" in the alphabet?",
+    "correctAnswer": "j",
+    "answers": ["l", "o", "h"]
+},
+{
+    "difficulty": 1,
+    "subject": "english",
+    "question": "What is the correct punctuation to this sentence: How are you today",
+    "correctAnswer": "?",
+    "answers": [".", "!", ";"]
+},
+{
+    "difficulty": 2,
+    "subject": "english",
+    "question": "Which of these is NOT needed to form a sentence?",
+    "correctAnswer": "period",
+    "answers": ["subject", "verb", "predicate"]
+},
+{
+    "difficulty": 2,
+    "subject": "english",
+    "question": "Which of these is NOT a noun?",
+    "correctAnswer": "fly",
+    "answers": ["school", "teacher", "car"]
+},
+{
+    "difficulty": 2,
+    "subject": "english",
+    "question": "Which of these is NOT a verb?",
+    "correctAnswer": "morning",
+    "answers": ["go", "see", "is"]
+}
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "id": "b5816b97-a245-4fb9-a685-514172092ba3",
+        "userName": "abby347",
+        "phoneNumber": "609-347-8632",
+        "email": "abby347@gmail.com",
+        "hero" : "Wonder Woman"
+    },
+    {
+        "id": "b5816b97-a245-4fb9-a685-514172099ba3",
+        "userName": "keving3",
+        "phoneNumber": "803-120-8461",
+        "email": "keving3@outlook.com",
+        "hero" : "Deadpool" 
+    }
+]
