@@ -1,14 +1,15 @@
 package model;
+import java.io.Serializable;
 import java.util.UUID;
 
-public class User {
-    private UUID id;
-    private String userName;
-    private String password;
-    private String phoneNumber;
-    private String email;
-    private Level level;  
-    private Hero hero;    
+public class User implements Serializable {
+    private final UUID id;
+    private final String userName;
+    private final String password;
+    private final String phoneNumber;
+    private final String email;
+    private final Level level;  // Assuming Level is a defined class
+    private final Hero hero;    // Assuming Hero is a defined class
 
     /**
      * Constructs a User with only the essential fields.

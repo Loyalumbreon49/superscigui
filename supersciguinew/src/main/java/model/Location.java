@@ -1,7 +1,11 @@
 package model;
 //Rkmp
 
-public class Location {
+import java.io.Serializable;
+
+
+public class Location implements Serializable {
+    private static final long serialVersionUID = 1L;
     
     public int xPos;
     public int yPos;
@@ -9,18 +13,15 @@ public class Location {
     private Weapon weapon;
 
     public Location(int xPos, int yPos) {
-
         this.xPos = xPos;
         this.yPos = yPos;
         weapon = null;
     }
 
-    public void setPos(int xPos, int yPos)
-    {
+    public void setPos(int xPos, int yPos) {
         this.xPos = xPos;
         this.yPos = yPos;
     }
-
 
     /*private void setGraphic() {
         locGraphic = "jimmy";
@@ -43,14 +44,10 @@ public class Location {
     }
 
     public boolean equals(Location locale) {
-        if (this.xPos == locale.xPos && this.yPos == locale.yPos)
-        {
+        if (this.xPos == locale.xPos && this.yPos == locale.yPos) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
 }
-
-
