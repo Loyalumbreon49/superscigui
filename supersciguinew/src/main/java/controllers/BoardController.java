@@ -28,19 +28,20 @@ public class BoardController {
 
     public int robX = 4; 
     public int robY = 8;
-    public boolean spedFalse = true;
+    public boolean spedFalse = false;
 
     
 
     @FXML
     void buttonUp(ActionEvent event) {
-        gm.hero.addWeapon(new model.Weapon("a", "move"));
+        gm.hero.setStrength(909);
         gm.mover("up");
         robY--;
         System.out.println("buttonUp");
         board_grid.getChildren().remove(robin_on);
         board_grid.add(robin_on, robX, robY);
         checkQuinn();
+        checkVictory();
     } 
 
     @FXML
@@ -51,6 +52,7 @@ public class BoardController {
         board_grid.getChildren().remove(robin_on);
         board_grid.add(robin_on, robX, robY);
         checkQuinn();
+        checkVictory();
     } 
 
     @FXML
@@ -61,6 +63,7 @@ public class BoardController {
         board_grid.getChildren().remove(robin_on);
         board_grid.add(robin_on, robX, robY);
         checkQuinn();
+        checkVictory();
     } 
 
     @FXML
@@ -71,6 +74,7 @@ public class BoardController {
         board_grid.getChildren().remove(robin_on);
         board_grid.add(robin_on, robX, robY);
         checkQuinn();
+        checkVictory();
     } 
 
     public void checkQuinn()
@@ -91,6 +95,19 @@ public class BoardController {
         else if (spedFalse == true && gm.hero.hasMove() == true)
         {
             spedFalse = false;
+        }
+
+        checkVictory();
+    }
+
+    public void checkVictory()
+    {
+        if(robX == gm.board.villainLocation.xPos && robY == 8-gm.board.villainLocation.yPos)
+        {
+            if (gm.fightVillain()) 
+            {
+                
+            }
         }
     }
     
