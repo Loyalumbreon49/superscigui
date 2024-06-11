@@ -90,6 +90,7 @@ public class Hero implements Serializable {
                 + "\nAll Weapons: " + weapons + "\nCollected Weapons: " + collectedWeapons + "\nStory: " + story;
     }
 
+<<<<<<< HEAD
     public boolean hasMove() {
         for (Weapon weapon : collectedWeapons) {
             if (weapon.getEffect().equalsIgnoreCase("move")) {
@@ -97,6 +98,27 @@ public class Hero implements Serializable {
             }
         }
         return false;
+=======
+    public boolean hasMove() 
+    {
+        boolean check = false;
+        //Iterator<Weapon> iterator = weapons.iterator();
+        int index = 0;
+        for(int i = 0; i < collectedWeapons.size(); i++)
+        {
+            if(collectedWeapons.get(i).getEffect().equalsIgnoreCase("move")) {
+                check = true;
+            }
+
+        }
+        /*while (iterator.hasNext())
+        {
+            if(collectedWeapons.get(index).getEffect().equalsIgnoreCase("move"))
+                check = true;
+            ++index;
+        }*/
+        return check;
+>>>>>>> 3a706bdd08e52f0cd8a77d2b29b5fae59aab5275
     }
 
     public boolean hasIntel() {

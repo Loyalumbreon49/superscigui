@@ -7,10 +7,10 @@ public class GameManager{
 
     private Scanner moveScanner;
 
-    protected Hero hero;
+    public Hero hero;
     protected Level level;
     protected Villain villain;
-    protected Board board;
+    public Board board;
     protected int victoryState;
     protected int objectivesCaptured;
     protected QuestionList questions;
@@ -73,7 +73,7 @@ public class GameManager{
         }
     }
 
-    private void mover(String Direct) 
+    public void mover(String Direct) 
     {
         Location J = board.heroLocation;
         int xJ = J.xPos;

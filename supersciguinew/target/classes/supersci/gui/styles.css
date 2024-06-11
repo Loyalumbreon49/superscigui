@@ -1,6 +1,12 @@
 .button {
-    -fx-background-color: rgb(18, 145, 15);
+    -fx-background-color: #107333;
 }
 .root {
-    -fx-background-color: rgb(18, 145, 15);
+    -fx-background-color: #107333;
+}
+.home_button {
+    -fx-background-color: #D9BF3D;
+}
+.home_background {
+    -fx-background-color: #107333;
 }
