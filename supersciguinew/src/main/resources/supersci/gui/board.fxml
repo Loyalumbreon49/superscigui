@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BoardController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BoardController">
    <children>
       <GridPane gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="605.0">
          <columnConstraints>
@@ -39,7 +39,7 @@
             <Insets left="25.0" top="21.7" />
          </VBox.margin>
          <children>
-            <ImageView fx:id="robin_on" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="0.4" scaleY="0.4" translateX="-41.0" GridPane.columnIndex="4" GridPane.rowIndex="8" fx:controller="controllers.PrimaryController">
+            <ImageView fx:id="robin_on" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="0.4" scaleY="0.4" translateX="-41.0" GridPane.columnIndex="4" GridPane.rowIndex="8" >
                <image>
                   <Image url="@../../../../../../../../Robin.jpg" />
                </image>
