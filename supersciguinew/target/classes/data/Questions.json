@@ -42,6 +42,27 @@
     "answers": ["4", "6", "0"]
 },
 {
+    "difficulty": 3,
+    "subject": "math",
+    "question": "Gemma has 130 beads for bracelets. She gives 75 beads to Piper and 6 beads to Claire. Which expression shows how to find the total number of beads Gemma has left?",
+    "correctAnswer": "130-75-6",
+    "answers": ["130-75+6", "75+6-130", "130+75+6"]
+},
+{
+    "difficulty": 3,
+    "subject": "math",
+    "question": "What is 64 x 3",
+    "correctAnswer": "192",
+    "answers": ["252", "128", "189"]
+},
+{
+    "difficulty": 3,
+    "subject": "math",
+    "question": "Mariela has 8 pages of math homework. There are 4 problems on each page. How many total problems does Mariela have for math homework?",
+    "correctAnswer": "32",
+    "answers": ["16", "36", "24"]
+},
+{
     "difficulty": 1,
     "subject": "riddles",
     "question": "What can you catch but not throw?",
