@@ -41,7 +41,7 @@
          <children>
             <ImageView fx:id="robin_on" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="0.4" scaleY="0.4" translateX="-41.0" GridPane.columnIndex="4" GridPane.rowIndex="8">
                <image>
-                  <Image url="@../../images/robinLogo.jpg" />
+                  <Image url="@../../images/Robin.jpg" />
                </image>
             </ImageView>
             <ImageView fx:id="harley_on" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="0.4" scaleY="0.4" translateX="-41.0" GridPane.columnIndex="4">
