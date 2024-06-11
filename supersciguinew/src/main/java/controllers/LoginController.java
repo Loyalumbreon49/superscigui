@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -30,11 +31,11 @@ public class LoginController {
 
     @FXML
     void createAccount(ActionEvent event) throws IOException {
-        App.setRoot("secondary");
+        App.setRoot("board");
     }
 
     @FXML
-    void login(ActionEvent event) {
+    void login(ActionEvent event) throws IOException{
         String username = txt_username.getText();
         String password = txt_password.getText();
         System.out.println("Username is"+ username);
@@ -49,6 +50,7 @@ public class LoginController {
             return;
         }
         System.out.println("Login Complete");
+        App.setRoot("board");
     }
 
 }

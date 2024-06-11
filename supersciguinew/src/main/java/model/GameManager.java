@@ -73,7 +73,7 @@ public class GameManager{
         }
     }
 
-    private void mover(String Direct) 
+    public void mover(String Direct) 
     {
         Location J = board.heroLocation;
         int xJ = J.xPos;
