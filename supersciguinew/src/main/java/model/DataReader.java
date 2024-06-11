@@ -9,6 +9,7 @@ import java.util.ArrayList;
  * DataReader class handles the serialization of game data to files. 
  * It provides methods to save arrays of Hero, Villain, User, and Question objects to specified files.
  */
+
 public class DataReader {
 
     public static void saveHeroes(ArrayList<Hero> heroes, String fileName) {

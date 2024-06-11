@@ -1,22 +1,23 @@
 package model;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Iterator;
+
 /**
  * Holds the information for the Hero
  * @author Amaya Shabazz
  */
-import java.util.ArrayList;
-import java.util.Iterator;
+public class Hero implements Serializable {
+    private static final long serialVersionUID = 1L;
 
-public class Hero {
     private String name;
     private String subject;
     private int strength;
     private String story;
     public ArrayList<Weapon> weapons;
     public ArrayList<Weapon> collectedWeapons;
-    
 
-    public Hero(String name, int strength, String subject, String story, ArrayList<Weapon> weapons) 
-    {
+    public Hero(String name, int strength, String subject, String story, ArrayList<Weapon> weapons) {
         this.setName(name);
         this.setStrength(strength);
         this.setSubject(subject);
@@ -25,58 +26,48 @@ public class Hero {
         collectedWeapons = new ArrayList<Weapon>();
     }
 
-    private void setStory(String story)
-    {
+    private void setStory(String story) {
         this.story = story;
     }
-    public String getStory()
-    {
+
+    public String getStory() {
         return this.story;
     }
-    private void setName(String name)
-    {
+
+    private void setName(String name) {
         this.name = name;
     }
 
-    public String getName() 
-    {
+    public String getName() {
         return name;
     }
 
-    public String getSubject() 
-    {
+    public String getSubject() {
         return subject;
     }
 
-    private void setSubject(String subject)
-    {
+    private void setSubject(String subject) {
         this.subject = subject;
     }
 
-    public int getStrength() 
-    {
+    public int getStrength() {
         return strength;
     }
 
-    public void setStrength(int strength) 
-    {
+    public void setStrength(int strength) {
         this.strength = strength;
     }
 
-    public ArrayList<Weapon> getCollectedWeapons()
-    {
+    public ArrayList<Weapon> getCollectedWeapons() {
         return this.collectedWeapons;
     }
 
-
-    public ArrayList<Weapon> getWeapons() 
-    {
-       return weapons;
+    public ArrayList<Weapon> getWeapons() {
+        return weapons;
     }
-    
-    //one list of weapons & one list of collected weapons
-    public void setWeapons(ArrayList<Weapon> weapons) 
-    {
+
+    // one list of weapons & one list of collected weapons
+    public void setWeapons(ArrayList<Weapon> weapons) {
         this.weapons = weapons;
     }
 
@@ -84,62 +75,45 @@ public class Hero {
      * Adds a weapon to the list of collected weapons
      * @param weapon Holds the weapon name and its effect
      */
-    public void addWeapon(Weapon weapon) 
-    {
+    public void addWeapon(Weapon weapon) {
         collectedWeapons.add(weapon);
         if (weapon.getEffect().equals("strength"))
-            strength+= 2;
+            strength += 2;
     }
 
     /**
      * Gives the description of the hero
      * @return Will return information about the current hero
      */
-    public String getDescription() 
-    {
-        return name+": \nStrength: "+strength+"\nSubject: "+subject
-        +"\nAll Weapons: "+weapons+"\nCollected Weapons: "+collectedWeapons+"\nStory: "+story;
+    public String getDescription() {
+        return name + ": \nStrength: " + strength + "\nSubject: " + subject
+                + "\nAll Weapons: " + weapons + "\nCollected Weapons: " + collectedWeapons + "\nStory: " + story;
     }
 
-    public boolean hasMove() 
-    {
-        boolean check = false;
-        Iterator<Weapon> iterator = weapons.iterator();
-        int index = 0;
-        while (iterator.hasNext())
-        {
-            if(collectedWeapons.get(index).getEffect().equalsIgnoreCase("move"))
-                check = true;
-            ++index;
+    public boolean hasMove() {
+        for (Weapon weapon : collectedWeapons) {
+            if (weapon.getEffect().equalsIgnoreCase("move")) {
+                return true;
+            }
         }
-        return check;
+        return false;
     }
 
-    public boolean hasIntel() 
-    {
-        boolean check = false;
-        Iterator<Weapon> iterator = weapons.iterator();
-        int index = 0;
-        while (iterator.hasNext())
-        {
-            if(collectedWeapons.get(index).getEffect().equalsIgnoreCase("intel"))
-                check = true;
-            ++index;
+    public boolean hasIntel() {
+        for (Weapon weapon : collectedWeapons) {
+            if (weapon.getEffect().equalsIgnoreCase("intel")) {
+                return true;
+            }
         }
-        return check;
+        return false;
     }
-    
-    public boolean hasStrength()
-    {
-        boolean check = false;
-        Iterator<Weapon> iterator = weapons.iterator();
-        int index = 0;
-        while (iterator.hasNext())
-        {
-            if(collectedWeapons.get(index).getEffect().equalsIgnoreCase("strength"))
-                check = true;
-            ++index;
+
+    public boolean hasStrength() {
+        for (Weapon weapon : collectedWeapons) {
+            if (weapon.getEffect().equalsIgnoreCase("strength")) {
+                return true;
+            }
         }
-        return check;
+        return false;
     }
 }

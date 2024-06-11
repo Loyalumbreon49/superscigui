@@ -1,15 +1,19 @@
 package model;
+import java.io.Serializable;
+import java.util.ArrayList;
+
 /**
- * Holds the infromation for the question
+ * Holds the information for the question
  * @author Amaya Shabazz
  */
-import java.util.ArrayList;
-public class Question {
-    public int difficulty;
-    public ArrayList<String> answers;
-    public String question;
-    public String correctAnswer;
-    public String subject;
+public class Question implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    private int difficulty;
+    private ArrayList<String> answers;
+    private String question;
+    private String correctAnswer;
+    private String subject;
 
     /**
      * Constructs a new question
@@ -19,8 +23,7 @@ public class Question {
      * @param answers Holds the other answers for the question
      * @param correctAnswer Holds the correct answer
      */
-    public Question(String question, int difficulty, String subject, ArrayList<String> answers, String correctAnswer)
-    {
+    public Question(String question, int difficulty, String subject, ArrayList<String> answers, String correctAnswer) {
         this.answers = new ArrayList<String>();
         this.setQuestion(question);
         this.setDifficulty(difficulty);
@@ -33,8 +36,7 @@ public class Question {
      * Gets the difficulty of the question
      * @return Will return a difficulty number
      */
-    public int getDifficulty()
-    {
+    public int getDifficulty() {
         return difficulty;
     }
 
@@ -42,8 +44,7 @@ public class Question {
      * Sets the difficulty
      * @param difficulty Holds a number to be used as the difficulty
      */
-    private void setDifficulty(int difficulty)
-    {
+    private void setDifficulty(int difficulty) {
         this.difficulty = difficulty;
     }
 
@@ -51,20 +52,17 @@ public class Question {
      * Sets the current question
      * @param question Holds the question
      */
-    private void setQuestion(String question)
-    {
+    private void setQuestion(String question) {
         this.question = question;
     }
 
     /**
      * Sets the list of incorrect answers
-     * @param answers Holds a list a answers
+     * @param answers Holds a list of answers
      */
-    private void setAnswers(ArrayList<String> answers)
-    {
-        for(int i=0;i<answers.size();i++)
-        {
-            this.answers.add(answers.get(i));
+    private void setAnswers(ArrayList<String> answers) {
+        for (String answer : answers) {
+            this.answers.add(answer);
         }
     }
 
@@ -72,8 +70,7 @@ public class Question {
      * Accesses the current question
      * @return Will return the question as a string
      */
-    public String getQuestion()
-    {
+    public String getQuestion() {
         return question;
     }
 
@@ -81,8 +78,7 @@ public class Question {
      * Accesses what subject the question is from
      * @return Will return the subject as a string
      */
-    public String getSubject()
-    {
+    public String getSubject() {
         return subject;
     }
 
@@ -90,8 +86,7 @@ public class Question {
      * Sets the question's subject
      * @param subject Holds the question's subject
      */
-    private void setSubject(String subject)
-    {
+    private void setSubject(String subject) {
         this.subject = subject;
     }
 
@@ -99,8 +94,7 @@ public class Question {
      * Accesses the correct answer
      * @return Will return the right answer as a string
      */
-    public String getAnswer()
-    {
+    public String getAnswer() {
         return correctAnswer;
     }
     
@@ -108,8 +102,7 @@ public class Question {
      * Sets the correct answer to the current question
      * @param correctAnswer Holds the correct answer to the question
      */
-    private void setAnswer(String correctAnswer)
-    {
+    private void setAnswer(String correctAnswer) {
         this.correctAnswer = correctAnswer;
     }
 
@@ -118,10 +111,7 @@ public class Question {
      * @return Will return the question as a string
      */
     @Override
-    public String toString()
-    {
+    public String toString() {
         return getQuestion();
     }
-
-
 }
