@@ -1,4 +1,5 @@
 package model;
+
 import java.util.ArrayList;
 
 public class Level {
@@ -6,21 +7,19 @@ public class Level {
     private ArrayList<Villain> villains;
     private ArrayList<Hero> heroes;
 
-    public Level()
-    {
+    public Level() {
         levelNumber = 1;
-        heroes = DataLoader.getHeroes("supersciguinew/src/main/java/data/Heroes.json");
-        villains = DataLoader.getVillains("supersciguinew/src/main/java/data/Villains.json");
+        heroes = DataLoader.getHeroes("json/Heroes.json");
+        villains = DataLoader.getVillains("json/Villains.json");
     }
-    
-        
+
     public int getLevelNumber() {
         return levelNumber;
     }
-   
+
     public Villain getVillain() {
-        if (villains.size() > levelNumber-1) {
-            return villains.get(levelNumber-1);
+        if (villains.size() > levelNumber - 1) {
+            return villains.get(levelNumber - 1);
         }
         return null;
     }
@@ -31,10 +30,8 @@ public class Level {
         }
         return null;
     }
-    
+
     public void nextLevel() {
         levelNumber++;
     }
-
-    
 }
