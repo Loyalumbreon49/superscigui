@@ -28,13 +28,13 @@ public class LoginController {
     @FXML
     private TextField txt_username;
 
-    @FXML
-    void createAccount(ActionEvent event) throws IOException {
-        App.setRoot("secondary");
-    }
+    /*@FXML
+    void gotoBoard() throws IOException {
+        App.setRoot("board");
+    }*/
 
     @FXML
-    void login(ActionEvent event) {
+    void login(ActionEvent event) throws IOException{
         String username = txt_username.getText();
         String password = txt_password.getText();
         System.out.println("Username is"+ username);
@@ -49,6 +49,8 @@ public class LoginController {
             return;
         }
         System.out.println("Login Complete");
+        // /gotoBoard();
+
     }
 
 }
