@@ -10,3 +10,9 @@
 .home_background {
     -fx-background-color: #107333;
 }
+.create_button_login{
+    -fx-background-color: white;
+}
+.create_button_create {
+    -fx-background-color: #8C1C1C;
+}
