@@ -3,10 +3,9 @@ package model;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-
 public class Villain implements Serializable {
     private static final long serialVersionUID = 1L;
-    
+
     private String name;
     private ArrayList<Location> objectiveLocation;
     private int strength;

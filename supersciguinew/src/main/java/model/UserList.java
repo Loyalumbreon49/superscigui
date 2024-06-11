@@ -11,7 +11,7 @@ public class UserList {
      * Private constructor for the singleton pattern to prevent external instantiation.
      */
     private UserList() {
-        users = DataLoader.getUsers("json/Users.json");
+        users = DataLoader.getUsers("supersciguinew/src/main/java/data/Users.json");
         if (users == null) {
             users = new ArrayList<>();
         }

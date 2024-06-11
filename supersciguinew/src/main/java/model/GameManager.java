@@ -150,14 +150,16 @@ public class GameManager{
         }
     }
 
-    public void fightVillain() {
+    public boolean fightVillain() {
         if (hero.getStrength() > villain.getStrength())
         {
             playerWins();
+            return true;
         }
         else 
         {
             playerLoses();
+            return false;
         }
 
     }

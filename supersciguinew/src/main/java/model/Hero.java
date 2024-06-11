@@ -1,7 +1,7 @@
 package model;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 /**
  * Holds the information for the Hero
@@ -66,7 +66,7 @@ public class Hero implements Serializable {
         return weapons;
     }
 
-    // one list of weapons & one list of collected weapons
+    // One list of weapons & one list of collected weapons
     public void setWeapons(ArrayList<Weapon> weapons) {
         this.weapons = weapons;
     }
@@ -90,15 +90,6 @@ public class Hero implements Serializable {
                 + "\nAll Weapons: " + weapons + "\nCollected Weapons: " + collectedWeapons + "\nStory: " + story;
     }
 
-<<<<<<< HEAD
-    public boolean hasMove() {
-        for (Weapon weapon : collectedWeapons) {
-            if (weapon.getEffect().equalsIgnoreCase("move")) {
-                return true;
-            }
-        }
-        return false;
-=======
     public boolean hasMove() 
     {
         boolean check = false;
@@ -118,7 +109,6 @@ public class Hero implements Serializable {
             ++index;
         }*/
         return check;
->>>>>>> 3a706bdd08e52f0cd8a77d2b29b5fae59aab5275
     }
 
     public boolean hasIntel() {
