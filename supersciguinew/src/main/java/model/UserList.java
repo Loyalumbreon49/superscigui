@@ -11,7 +11,10 @@ public class UserList {
      * Private constructor for the singleton pattern to prevent external instantiation.
      */
     private UserList() {
-        users = DataLoader.getUsers("supersciguinew/src/main/java/data/Users.json");
+        users = DataLoader.getUsers("json/Users.json");
+        if (users == null) {
+            users = new ArrayList<>();
+        }
     }
 
     /**
@@ -39,8 +42,9 @@ public class UserList {
         if (userName == null || userName.isEmpty() || password == null || !isValidPassword(password) || phoneNumber == null || !phoneNumber.matches("\\d{3}-\\d{3}-\\d{4}") || email == null || email.isEmpty()) {
             return false;
         }
-        
+
         for (User user : users) {
+            System.out.println("Checking user: " + user.getUserName()); // Debug statement
             if (user.getUserName().equals(userName)) {
                 System.out.println("Username already exists. Username is case-sensitive.");
                 return false;

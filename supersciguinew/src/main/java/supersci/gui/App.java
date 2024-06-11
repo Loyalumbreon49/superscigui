@@ -20,7 +20,7 @@ public class App extends Application {
         System.out.println("Hi");
         // scene = new Scene(loadFXML("board"), 900, 700);
         // scene = new Scene(loadFXML("login"), 640, 460);
-        scene = new Scene(loadFXML("home"), 640, 460);
+        scene = new Scene(loadFXML("home"), 900, 700);
         stage.setScene(scene);
         stage.show();
     }
