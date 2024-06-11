@@ -28,14 +28,19 @@ public class BoardController {
 
     public int robX = 4; 
     public int robY = 8;
+    public boolean spedFalse = true;
+
+    
 
     @FXML
     void buttonUp(ActionEvent event) {
+        gm.hero.addWeapon(new model.Weapon("a", "move"));
         gm.mover("up");
         robY--;
         System.out.println("buttonUp");
         board_grid.getChildren().remove(robin_on);
         board_grid.add(robin_on, robX, robY);
+        checkQuinn();
     } 
 
     @FXML
@@ -45,6 +50,7 @@ public class BoardController {
         System.out.println("buttonDown");
         board_grid.getChildren().remove(robin_on);
         board_grid.add(robin_on, robX, robY);
+        checkQuinn();
     } 
 
     @FXML
@@ -54,6 +60,7 @@ public class BoardController {
         System.out.println("buttonLeft");
         board_grid.getChildren().remove(robin_on);
         board_grid.add(robin_on, robX, robY);
+        checkQuinn();
     } 
 
     @FXML
@@ -63,6 +70,28 @@ public class BoardController {
         System.out.println("buttonRight");
         board_grid.getChildren().remove(robin_on);
         board_grid.add(robin_on, robX, robY);
+        checkQuinn();
     } 
+
+    public void checkQuinn()
+    {
+        if (spedFalse == false && gm.hero.hasMove() == false)
+        {
+            gm.villainTurn();
+            board_grid.getChildren().remove(harley_on);
+            board_grid.add(harley_on, gm.board.villainLocation.xPos, 8-gm.board.villainLocation.yPos);
+        }
+        else if (spedFalse == false && gm.hero.hasMove() == true)
+        {
+            gm.villainTurn();
+            board_grid.getChildren().remove(harley_on);
+            board_grid.add(harley_on, gm.board.villainLocation.xPos, 8-gm.board.villainLocation.yPos);
+            spedFalse = true;
+        }
+        else if (spedFalse == true && gm.hero.hasMove() == true)
+        {
+            spedFalse = false;
+        }
+    }
     
 }

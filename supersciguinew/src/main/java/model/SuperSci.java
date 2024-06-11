@@ -20,6 +20,11 @@ public class SuperSci {
         return userlist.login(userName, password);
     }
 
+    public boolean createAccount(String userName, String password, String phoneNumber, String email, UserList userList)
+    {
+        return userList.createAccount(userName, password, phoneNumber, email);
+    }
+
     /**
      * Starts the game session.
      */

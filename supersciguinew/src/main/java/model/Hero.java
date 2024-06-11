@@ -104,14 +104,21 @@ public class Hero {
     public boolean hasMove() 
     {
         boolean check = false;
-        Iterator<Weapon> iterator = weapons.iterator();
+        //Iterator<Weapon> iterator = weapons.iterator();
         int index = 0;
-        while (iterator.hasNext())
+        for(int i = 0; i < collectedWeapons.size(); i++)
+        {
+            if(collectedWeapons.get(i).getEffect().equalsIgnoreCase("move")) {
+                check = true;
+            }
+
+        }
+        /*while (iterator.hasNext())
         {
             if(collectedWeapons.get(index).getEffect().equalsIgnoreCase("move"))
                 check = true;
             ++index;
-        }
+        }*/
         return check;
     }
 

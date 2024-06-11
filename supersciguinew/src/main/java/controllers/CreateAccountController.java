@@ -35,7 +35,7 @@ public class CreateAccountController {
     private TextField txt_username;
 
     @FXML
-    void createAccount(ActionEvent event) {
+    void createAccount(ActionEvent event) throws IOException {
         String username = txt_username.getText();
         String password = txt_password.getText();
         String phoneNumber = txt_phoneNumber.getText();
@@ -43,12 +43,19 @@ public class CreateAccountController {
         
         UserList users = UserList.getInstance();
         SuperSci superSci = new SuperSci(users);
-        boolean ifCreateAccount = superSci.createAccount(username, password, phoneNumber, email);
+        boolean ifCreateAccount = superSci.createAccount(username, password, phoneNumber, email, users);
+
+        if(!ifCreateAccount)
+        {
+            System.out.println("Invalid Entry");
+            return;
+        }
+        System.out.println("Account Creation Complete");
+        App.setRoot("login");
     }
 
     @FXML
     void login(ActionEvent event) throws  IOException {
         App.setRoot("login");
     }
-
 }
