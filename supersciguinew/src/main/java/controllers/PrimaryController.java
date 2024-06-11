@@ -1,13 +1,18 @@
-package controllers;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import model.SuperSci;
 import model.UserList;
 
 public class PrimaryController {
+
+    @FXML
+    private Button createAccountButton;
+
+    @FXML
+    private AnchorPane login_pane;
 
     @FXML
     private Button primaryButton;
@@ -17,6 +22,11 @@ public class PrimaryController {
 
     @FXML
     private TextField txt_username;
+
+    @FXML
+    void createAccount(ActionEvent event) {
+
+    }
 
     @FXML
     void login(ActionEvent event) {
@@ -30,12 +40,10 @@ public class PrimaryController {
         
         if(!ifLogin)
         {
-            System.out.println("Invalid username!");
+            System.out.println("Invalid Entry");
             return;
         }
-        System.out.println("YAY");
-        
-
+        System.out.println("Login Complete");
     }
 
 }
