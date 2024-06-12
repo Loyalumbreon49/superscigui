@@ -51,7 +51,7 @@ public class CreateAccountController {
             return;
         }
         System.out.println("Account Creation Complete");
-        App.setRoot("login");
+        // App.setRoot("login");
     }
 
     @FXML
