@@ -16,3 +16,6 @@
 .create_button_create {
     -fx-background-color: #8C1C1C;
 }
+.win_button {
+    -fx-background-color: white;
+}

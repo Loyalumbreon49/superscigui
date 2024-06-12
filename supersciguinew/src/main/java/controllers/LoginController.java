@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -50,7 +49,7 @@ public class LoginController {
             return;
         }
         System.out.println("Login Complete");
-        App.setRoot("board");
+        App.setRoot("hero_screen");
     }
 
 }
