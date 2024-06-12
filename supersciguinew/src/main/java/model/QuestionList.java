@@ -17,7 +17,7 @@ public class QuestionList {
      */
     private QuestionList(String subject)
     {
-        questions = DataLoader.getQuestions("json/Questions.json", subject);
+        questions = DataLoader.getQuestions("supersciguinew/src/main/java/data/Questions.json", subject);
     }
     
     /**

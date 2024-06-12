@@ -10,7 +10,7 @@ public class Location implements Serializable {
     public int xPos;
     public int yPos;
     //private String locGraphic;
-    private Weapon weapon;
+    public Weapon weapon;
 
     public Location(int xPos, int yPos) {
         this.xPos = xPos;
