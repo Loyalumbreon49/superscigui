@@ -49,7 +49,7 @@ public class LoginController {
             return;
         }
         System.out.println("Login Complete");
-        App.setRoot("hero_screen");
+        App.setRoot("board");
     }
 
 }
