@@ -9,10 +9,10 @@ public class GameManager{
 
     public Hero hero;
     public Level level;
-    protected Villain villain;
+    public Villain villain;
     public Board board;
-    protected int victoryState;
-    protected int objectivesCaptured;
+    public int victoryState;
+    public int objectivesCaptured;
     public QuestionList questions;
 
     public GameManager(){

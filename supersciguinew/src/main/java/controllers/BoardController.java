@@ -1,5 +1,7 @@
 package controllers;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -9,6 +11,7 @@ import javafx.scene.layout.VBox;
 import model.Question;
 import model.SuperSci;
 import model.UserList;
+import supersci.gui.App;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image; 
 import javafx.geometry.Rectangle2D;
@@ -51,7 +54,7 @@ public class BoardController {
     
 
     @FXML
-    void buttonUp(ActionEvent event) {
+    void buttonUp(ActionEvent event) throws IOException {
         gm.mover("up");
         robY--;
         System.out.println("buttonUp");
@@ -63,7 +66,7 @@ public class BoardController {
     } 
 
     @FXML
-    void buttonDown(ActionEvent event) {
+    void buttonDown(ActionEvent event) throws IOException {
         gm.mover("down");
         robY++;
         System.out.println("buttonDown");
@@ -75,7 +78,7 @@ public class BoardController {
     } 
 
     @FXML
-    void buttonLeft(ActionEvent event) {
+    void buttonLeft(ActionEvent event) throws IOException {
         gm.mover("left");
         robX--;
         System.out.println("buttonLeft");
@@ -87,7 +90,7 @@ public class BoardController {
     } 
 
     @FXML
-    void buttonRight(ActionEvent event) {
+    void buttonRight(ActionEvent event) throws IOException {
         gm.mover("right");
         robX++;
         System.out.println("buttonRight");
@@ -98,7 +101,7 @@ public class BoardController {
         checkVictory();
     } 
 
-    public void checkQuinn()
+    public void checkQuinn() throws IOException
     {
         if (spedFalse == false && gm.hero.hasMove() == false)
         {
@@ -121,7 +124,7 @@ public class BoardController {
         checkVictory();
     }
 
-    public void checkVictory()
+    public void checkVictory() throws IOException
     {
         if (time == 0)
         {
@@ -165,8 +168,16 @@ public class BoardController {
         {
             if (gm.fightVillain()) 
             {
-                
+                App.setRoot("win");
             }
+            else{
+                App.setRoot("lose");
+            }
+        }
+        if (gm.objectivesCaptured >= 3)
+        {
+            gm.playerLoses();
+            App.setRoot("lose");
         }
     }
 
