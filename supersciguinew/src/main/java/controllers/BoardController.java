@@ -26,14 +26,17 @@ public class BoardController {
     @FXML
     private ImageView robin_on;
 
+    @FXML
+    private ImageView robin_weapon = new ImageView("supersciguinew/src/main/resources/images/hook.png");
+
     public int robX = 4; 
     public int robY = 8;
     public boolean spedFalse = false;
-
     
 
     @FXML
     void buttonUp(ActionEvent event) {
+        board_grid.add(robin_weapon, 2, 2);
         gm.mover("up");
         robY--;
         System.out.println("buttonUp");
@@ -111,3 +114,5 @@ public class BoardController {
     }
     
 }
+
+
