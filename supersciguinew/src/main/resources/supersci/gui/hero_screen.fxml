@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Scene xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HeroScreenController">
     <AnchorPane prefHeight="649.0" prefWidth="840.0">
       <children>
          <Rectangle arcHeight="5.0" arcWidth="5.0" height="699.0" layoutX="-7.0" stroke="BLACK" strokeType="INSIDE" width="885.0" />
