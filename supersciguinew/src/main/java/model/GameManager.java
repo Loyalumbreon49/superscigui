@@ -8,12 +8,12 @@ public class GameManager{
     private Scanner moveScanner;
 
     public Hero hero;
-    protected Level level;
+    public Level level;
     protected Villain villain;
     public Board board;
     protected int victoryState;
     protected int objectivesCaptured;
-    protected QuestionList questions;
+    public QuestionList questions;
 
     public GameManager(){
         level = new Level();
@@ -64,6 +64,7 @@ public class GameManager{
                 {
                     hero.setStrength(hero.getStrength()+2);
                 }
+                board.heroLocation.weapon = null;
             }
         }
 

@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import model.Question;
 import model.SuperSci;
 import model.UserList;
 import javafx.scene.image.ImageView;
@@ -56,6 +57,7 @@ public class BoardController {
         System.out.println("buttonUp");
         board_grid.getChildren().remove(robin_on);
         board_grid.add(robin_on, robX, robY);
+        checkWeapon();
         checkQuinn();
         checkVictory();
     } 
@@ -67,6 +69,7 @@ public class BoardController {
         System.out.println("buttonDown");
         board_grid.getChildren().remove(robin_on);
         board_grid.add(robin_on, robX, robY);
+        checkWeapon();
         checkQuinn();
         checkVictory();
     } 
@@ -78,6 +81,7 @@ public class BoardController {
         System.out.println("buttonLeft");
         board_grid.getChildren().remove(robin_on);
         board_grid.add(robin_on, robX, robY);
+        checkWeapon();
         checkQuinn();
         checkVictory();
     } 
@@ -89,6 +93,7 @@ public class BoardController {
         System.out.println("buttonRight");
         board_grid.getChildren().remove(robin_on);
         board_grid.add(robin_on, robX, robY);
+        checkWeapon();
         checkQuinn();
         checkVictory();
     } 
@@ -162,6 +167,34 @@ public class BoardController {
             {
                 
             }
+        }
+    }
+
+    public void checkWeapon()
+    {
+        if (gm.board.locations.get(robX).get(robY).isWeapon())
+        {
+            gm.hero.collectedWeapons.add(gm.board.locations.get(robX).get(robY).getWeapon());
+            if(gm.board.locations.get(robX).get(robY).getWeapon().getEffect().equals("strength"))
+            {
+                gm.hero.setStrength(gm.hero.getStrength()+2);
+            }
+            String effective = gm.board.locations.get(robX).get(robY).getWeapon().getEffect();
+                if (effective.equals("move"))
+                {
+                    board_grid.getChildren().remove(hook);
+                }
+                if (effective.equals("strength"))
+                {
+                    board_grid.getChildren().remove(staff);
+                }
+                if (effective.equals("intel"))
+                {
+                    board_grid.getChildren().remove(birdarang);
+                }
+            gm.board.heroLocation.weapon = null;
+
+            
         }
     }
     
