@@ -17,7 +17,7 @@ public class HomeController {
 
     @FXML
     void switchToCreateAccount(ActionEvent event) throws IOException {
-        App.setRoot("secondary");
+        App.setRoot("create_account");
     }
 
     @FXML

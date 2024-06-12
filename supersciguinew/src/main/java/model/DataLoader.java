@@ -97,8 +97,14 @@ public class DataLoader {
                 String phoneNumber = (String)personJSON.get("phoneNumber");
                 String email = (String)personJSON.get("email");
                 //String heroName = (String)personJSON.get("hero");
-                
-                users.add(new User(id, userName, "password", phoneNumber, email));
+                if (userName.equals(""))
+                {
+                    users.add(new User(id, userName, "", phoneNumber, email));
+                }
+                else
+                {
+                    users.add(new User(id, userName, "password", phoneNumber, email));
+                }
             }
             
             return users;
