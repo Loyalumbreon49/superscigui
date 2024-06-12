@@ -34,7 +34,6 @@ public class BoardController {
 
     @FXML
     void buttonUp(ActionEvent event) {
-        gm.hero.setStrength(909);
         gm.mover("up");
         robY--;
         System.out.println("buttonUp");

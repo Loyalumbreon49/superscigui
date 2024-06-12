@@ -9,8 +9,8 @@ public class Level {
 
     public Level() {
         levelNumber = 1;
-        heroes = DataLoader.getHeroes("json/Heroes.json");
-        villains = DataLoader.getVillains("json/Villains.json");
+        heroes = DataLoader.getHeroes("supersciguinew/src/main/java/data/Heroes.json");
+        villains = DataLoader.getVillains("supersciguinew/src/main/java/data/Villains.json");
     }
 
     public int getLevelNumber() {
