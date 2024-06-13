@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -44,6 +45,21 @@ public class BoardController {
 
     @FXML
     private ImageView staff_one = new ImageView();
+
+    @FXML
+    private Label rob_info;
+
+    @FXML
+    private Label rob_strength;
+
+    @FXML
+    private Label rob_speed;
+
+    @FXML
+    private Label vil_objectives;
+
+    @FXML
+    private Label qAsk = new Label();
 
     
 
@@ -128,41 +144,7 @@ public class BoardController {
     {
         if (time == 0)
         {
-            for (int i = 0; i < 8; i++)
-            {
-                for (int j = 0; j < 8; j++)
-                {
-                    if (gm.board.locations.get(i).get(j).isWeapon())
-                    {
-                        String effective = gm.board.locations.get(i).get(j).getWeapon().getEffect();
-                        if (effective.equals("move"))
-                        {
-                            hook.setImage(new Image(getClass().getResourceAsStream("/images/hook.png")));
-                            hook.setFitWidth(50);
-                            hook.setFitHeight(50);
-                            board_grid.add(hook, i, j);
-                            time++;
-                        }
-                        if (effective.equals("strength"))
-                        {
-                            staff.setImage(new Image(getClass().getResourceAsStream("/images/staff.jpg")));
-                            staff.setFitWidth(50);
-                            staff.setFitHeight(50);
-                            board_grid.add(staff, i, j);
-                            time++;
-                        }
-                        if (effective.equals("intel"))
-                        {
-                            birdarang.setImage(new Image(getClass().getResourceAsStream("/images/birdarang.png")));
-                            birdarang.setFitWidth(50);
-                            birdarang.setFitHeight(50);
-                            board_grid.add(birdarang, i, j);
-                            time++;
-                        }
-                    }
-                }
-            }
-
+            initiate();
         }
         if(robX == gm.board.villainLocation.xPos && robY == 8-gm.board.villainLocation.yPos)
         {
@@ -174,6 +156,10 @@ public class BoardController {
                 App.setRoot("lose");
             }
         }
+
+        String obj = "Objectives: " + gm.objectivesCaptured;
+        vil_objectives.setText(obj);
+
         if (gm.objectivesCaptured >= 3)
         {
             gm.playerLoses();
@@ -194,10 +180,12 @@ public class BoardController {
                 if (effective.equals("move"))
                 {
                     board_grid.getChildren().remove(hook);
+                    rob_speed.setText("Speed: 2");
                 }
                 if (effective.equals("strength"))
                 {
                     board_grid.getChildren().remove(staff);
+                    rob_strength.setText("Strength: 4");
                 }
                 if (effective.equals("intel"))
                 {
@@ -207,6 +195,44 @@ public class BoardController {
 
             
         }
+    }
+
+    public void initiate() {
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                if (gm.board.locations.get(i).get(j).isWeapon())
+                {
+                    String effective = gm.board.locations.get(i).get(j).getWeapon().getEffect();
+                    if (effective.equals("move"))
+                    {
+                        hook.setImage(new Image(getClass().getResourceAsStream("/images/hook.png")));
+                        hook.setFitWidth(50);
+                        hook.setFitHeight(50);
+                        board_grid.add(hook, i, j);
+                        time++;
+                    }
+                    if (effective.equals("strength"))
+                    {
+                        staff.setImage(new Image(getClass().getResourceAsStream("/images/staff.jpg")));
+                        staff.setFitWidth(50);
+                        staff.setFitHeight(50);
+                        board_grid.add(staff, i, j);
+                        time++;
+                    }
+                    if (effective.equals("intel"))
+                    {
+                        birdarang.setImage(new Image(getClass().getResourceAsStream("/images/birdarang.png")));
+                        birdarang.setFitWidth(50);
+                        birdarang.setFitHeight(50);
+                        board_grid.add(birdarang, i, j);
+                        time++;
+                    }
+                }
+            }
+        }
+        
     }
     
 }
