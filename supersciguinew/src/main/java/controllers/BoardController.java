@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import model.Question;
@@ -17,6 +18,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.Image; 
 import javafx.geometry.Rectangle2D;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
 
 public class BoardController {
 
@@ -61,12 +63,22 @@ public class BoardController {
     @FXML
     private Label qAsk = new Label();
 
+    @FXML
+    private Rectangle hider = new Rectangle(64, 64, Color.WHITE);
+
+    @FXML
+    private TextField qAnswer = new TextField();
+
+    @FXML
+    private Button qButton;
+
     
 
     public int robX = 4; 
     public int robY = 8;
     public boolean spedFalse = false;
     public int time = 0;
+    public String answer;
     
 
     @FXML
@@ -171,29 +183,7 @@ public class BoardController {
     {
         if (gm.board.locations.get(robX).get(robY).isWeapon())
         {
-            gm.hero.collectedWeapons.add(gm.board.locations.get(robX).get(robY).getWeapon());
-            if(gm.board.locations.get(robX).get(robY).getWeapon().getEffect().equals("strength"))
-            {
-                gm.hero.setStrength(gm.hero.getStrength()+2);
-            }
-            String effective = gm.board.locations.get(robX).get(robY).getWeapon().getEffect();
-                if (effective.equals("move"))
-                {
-                    board_grid.getChildren().remove(hook);
-                    rob_speed.setText("Speed: 2");
-                }
-                if (effective.equals("strength"))
-                {
-                    board_grid.getChildren().remove(staff);
-                    rob_strength.setText("Strength: 4");
-                }
-                if (effective.equals("intel"))
-                {
-                    board_grid.getChildren().remove(birdarang);
-                }
-            gm.board.heroLocation.weapon = null;
-
-            
+            askQuestion();            
         }
     }
 
@@ -235,7 +225,79 @@ public class BoardController {
         
     }
     
+    public void askQuestion() {
+
+        VboX.getChildren().add(hider);
+        hider.setScaleX(100);
+        hider.setScaleY(100);
+        hider.setTranslateX(500);
+        hider.setTranslateY(-600);
+        VboX.getChildren().add(qAsk);
+        qAsk.setTranslateX(500);
+        qAsk.setTranslateY(-600);
+        Question q = gm.questions.getQuestion(1);
+        qAsk.setText(q.getQuestion());
+        answer = q.getAnswer();
+        qButton.toFront();
+        qButton.setTranslateX(500);
+        qButton.setTranslateY(-670);
+        VboX.getChildren().add(qAnswer);
+        qAnswer.setTranslateX(500);
+        qAnswer.setTranslateY(-600);
+    }
+
+    @FXML
+    void finalize(ActionEvent event) throws IOException{
+        String answer = qAnswer.getText();
+        System.out.println("Answer is "+ answer);
+        
+        if (answer.equals(this.answer)) {
+            addWeapon();
+        }
+        else {
+            qHide();
+        }
+        qAnswer.setText("");
+
+    }
+
+    public void addWeapon()
+    {
+        gm.hero.collectedWeapons.add(gm.board.locations.get(robX).get(robY).getWeapon());
+                if(gm.board.locations.get(robX).get(robY).getWeapon().getEffect().equals("strength"))
+                {
+                    gm.hero.setStrength(gm.hero.getStrength()+2);
+                }
+                String effective = gm.board.locations.get(robX).get(robY).getWeapon().getEffect();
+                if (effective.equals("move"))
+                {
+                    board_grid.getChildren().remove(hook);
+                    rob_speed.setText("Speed: 2");
+                }
+                if (effective.equals("strength"))
+                {
+                    board_grid.getChildren().remove(staff);
+                    rob_strength.setText("Strength: 4");
+                }
+                if (effective.equals("intel"))
+                {
+                    board_grid.getChildren().remove(birdarang);
+                }
+            gm.board.heroLocation.weapon = null;
+            qHide();
+    }
+
+    public void qHide() {
+
+        VboX.getChildren().remove(hider);
+        VboX.getChildren().remove(qAsk);
+        qButton.toBack();
+        VboX.getChildren().remove(qAnswer);
+    }
+
 }
+
+
 
 
 
