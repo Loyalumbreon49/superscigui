@@ -14,7 +14,7 @@ public class WinController {
 
     @FXML
     void switchToPlayScreen(ActionEvent event) throws IOException {
-        App.setRoot("hero_screen");
+        App.setRoot("play_screen");
     }
 
 }
