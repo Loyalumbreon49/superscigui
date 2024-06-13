@@ -39,9 +39,7 @@ public class UserList {
      * @return true if the account was created successfully, false if the username is already in use.
      */
     public boolean createAccount(String userName, String password, String phoneNumber, String email) {
-        System.out.println("Check 1");
         if (userName == null || userName.isEmpty() || password == null || !isValidPassword(password) || phoneNumber == null || email == null || email.isEmpty()) {
-            System.out.println("Check 1.1");
             return false;
         }
         
@@ -49,14 +47,12 @@ public class UserList {
             System.out.println("Checking user: " + user.getUserName()); // Debug statement
             if (user.getUserName().equals(userName)) {
                 System.out.println("Username already exists. Username is case-sensitive.");
-                System.out.println("Check 2");
                 return false;
             }
         }
         User newUser = new User(UUID.randomUUID(), userName, password, phoneNumber, email);
         users.add(newUser);
         DataReader.saveUsers(users, "json/Users.json");
-        System.out.println("Check 3");
         return true;
     }
 
