@@ -115,7 +115,7 @@
     "difficulty": 1,
     "subject": "science",
     "question": "Which of these is NOT a state of matter?",
-    "correctAnswer": "ligth",
+    "correctAnswer": "light",
     "answers": ["solid", "liquid", "gas"]
 },
 {

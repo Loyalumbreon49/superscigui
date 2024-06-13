@@ -7,18 +7,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import model.Question;
-import model.SuperSci;
-import model.UserList;
-import supersci.gui.App;
-import javafx.scene.image.ImageView;
-import javafx.scene.image.Image; 
-import javafx.geometry.Rectangle2D;
-import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import model.Question;
+import supersci.gui.App;
 
 public class BoardController {
 
