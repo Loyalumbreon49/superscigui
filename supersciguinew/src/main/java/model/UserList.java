@@ -39,20 +39,24 @@ public class UserList {
      * @return true if the account was created successfully, false if the username is already in use.
      */
     public boolean createAccount(String userName, String password, String phoneNumber, String email) {
-        if (userName == null || userName.isEmpty() || password == null || !isValidPassword(password) || phoneNumber == null || !phoneNumber.matches("\\d{3}-\\d{3}-\\d{4}") || email == null || email.isEmpty()) {
+        System.out.println("Check 1");
+        if (userName == null || userName.isEmpty() || password == null || !isValidPassword(password) || phoneNumber == null || email == null || email.isEmpty()) {
+            System.out.println("Check 1.1");
             return false;
         }
-
+        
         for (User user : users) {
             System.out.println("Checking user: " + user.getUserName()); // Debug statement
             if (user.getUserName().equals(userName)) {
                 System.out.println("Username already exists. Username is case-sensitive.");
+                System.out.println("Check 2");
                 return false;
             }
         }
         User newUser = new User(UUID.randomUUID(), userName, password, phoneNumber, email);
         users.add(newUser);
         DataReader.saveUsers(users, "json/Users.json");
+        System.out.println("Check 3");
         return true;
     }
 
@@ -62,7 +66,7 @@ public class UserList {
      * @return true if the password is valid, false otherwise.
      */
     private static boolean isValidPassword(String password) {
-        return password.length() >= 6 && password.matches(".*[!@#$%&*]+.*");
+        return password.length() >= 6;
     }
 
     /**
