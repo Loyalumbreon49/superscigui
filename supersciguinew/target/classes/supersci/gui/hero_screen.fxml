@@ -12,8 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HeroScreenController">
-    <AnchorPane prefHeight="649.0" prefWidth="840.0">
+    <AnchorPane prefHeight="649.0" prefWidth="840.0"  xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HeroScreenController">
       <children>
          <Rectangle arcHeight="5.0" arcWidth="5.0" height="699.0" layoutX="-7.0" stroke="BLACK" strokeType="INSIDE" width="885.0" />
          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="704.0" layoutX="-1.0" layoutY="-1.0" stroke="#ae8507" strokeType="INSIDE" strokeWidth="6.0" width="883.0" />
@@ -66,4 +65,4 @@
          </Button>
          <Separator layoutX="421.0" layoutY="183.0" orientation="VERTICAL" prefHeight="313.0" prefWidth="53.0" />
       </children></AnchorPane>
-</Scene>
+
