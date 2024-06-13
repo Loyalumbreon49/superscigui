@@ -30,7 +30,7 @@ public class LoginController {
 
     @FXML
     void createAccount(ActionEvent event) throws IOException {
-        App.setRoot("board");
+        App.setRoot("play_screen");
     }
 
     @FXML
@@ -49,7 +49,7 @@ public class LoginController {
             return;
         }
         System.out.println("Login Complete");
-        App.setRoot("hero_screen");
+        App.setRoot("play_screen");
     }
 
 }

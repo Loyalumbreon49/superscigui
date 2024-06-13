@@ -64,5 +64,11 @@
             </font>
          </Button>
          <Separator layoutX="421.0" layoutY="183.0" orientation="VERTICAL" prefHeight="313.0" prefWidth="53.0" />
+<<<<<<< HEAD
       </children></AnchorPane>
 
+=======
+      </children>
+      </AnchorPane>
+</Scene>
+>>>>>>> 44d8de84f3e0c7eae16df2e58b5f659d2a104d1f
