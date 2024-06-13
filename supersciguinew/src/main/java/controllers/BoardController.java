@@ -230,20 +230,21 @@ public class BoardController {
         VboX.getChildren().add(hider);
         hider.setScaleX(100);
         hider.setScaleY(100);
-        hider.setTranslateX(500);
+        hider.setTranslateX(100);
         hider.setTranslateY(-600);
         VboX.getChildren().add(qAsk);
-        qAsk.setTranslateX(500);
-        qAsk.setTranslateY(-600);
+        qAsk.setTranslateX(100);
+        qAsk.setTranslateY(-1000);
         Question q = gm.questions.getQuestion(1);
         qAsk.setText(q.getQuestion());
         answer = q.getAnswer();
         qButton.toFront();
-        qButton.setTranslateX(500);
-        qButton.setTranslateY(-670);
+        qButton.setTranslateX(100);
+        qButton.setTranslateY(-900);
         VboX.getChildren().add(qAnswer);
-        qAnswer.setTranslateX(500);
-        qAnswer.setTranslateY(-600);
+        qAnswer.setTranslateX(-270);
+        qAnswer.setTranslateY(-970);
+        qAnswer.setScaleX(0.2);
     }
 
     @FXML
