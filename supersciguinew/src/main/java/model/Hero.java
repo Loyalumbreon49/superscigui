@@ -112,12 +112,18 @@ public class Hero implements Serializable {
     }
 
     public boolean hasIntel() {
-        for (Weapon weapon : collectedWeapons) {
-            if (weapon.getEffect().equalsIgnoreCase("intel")) {
-                return true;
+        boolean check = false;
+        //Iterator<Weapon> iterator = weapons.iterator();
+        int index = 0;
+        for(int i = 0; i < collectedWeapons.size(); i++)
+        {
+            if(collectedWeapons.get(i).getEffect().equalsIgnoreCase("intel")) {
+                check = true;
             }
+
         }
-        return false;
+
+        return check;
     }
 
     public boolean hasStrength() {

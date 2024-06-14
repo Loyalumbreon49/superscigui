@@ -30,7 +30,7 @@ public class LoginController {
 
     @FXML
     void createAccount(ActionEvent event) throws IOException {
-        App.setRoot("play_screen");
+        App.setRoot("create_account");
     }
 
     @FXML

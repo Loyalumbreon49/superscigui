@@ -138,10 +138,19 @@ public class GameManager{
         board = new Board(villain);
     }
 
-    public boolean showVillainLocation() {
+    public boolean showVillainLocation(int x, int y) {
+        int vX = board.villainLocation.xPos;
+        int vY = board.villainLocation.yPos;
+        y = y - 8;
         if(hero.hasIntel())
         {
             System.out.println("villainShown");
+            return true;
+        }
+        else if( (  (((vX - x >= 0) && (vX -x <=2)) || ((x - vX >= 0) && (x - vX <=2))) && y == vY ) || (  (((vY - y >= 0) && (vY -y <=2)) || ((y - vY >= 0) && (y - vY <=2))) && x == vX ) )
+        {
+            System.out.println("her0x: " + x + " her0y: " + y + " vilX: " + vX + " vilY: " + vY);
+            System.out.println("heroNextToVillain");
             return true;
         }
         else
@@ -211,7 +220,7 @@ public class GameManager{
         victoryState = -1;
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         GameManager gm = new GameManager();
         gm.hero = gm.level.getHero();
         System.out.println(gm.hero.getDescription());
@@ -224,10 +233,10 @@ public class GameManager{
 
         gm.gameRun();
         
-        /* 
+        
         Question qAsk = gm.questions.getQuestion(1);
         System.out.println(qAsk);
         String userAnswer = gm.moveScanner.nextLine();
-        System.out.println(gm.questions.checkAnswer(userAnswer, qAsk));*/
-    }
+        System.out.println(gm.questions.checkAnswer(userAnswer, qAsk));
+    }*/
 }

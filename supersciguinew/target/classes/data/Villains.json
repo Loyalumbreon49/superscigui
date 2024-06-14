@@ -3,12 +3,12 @@
     "name": "Harley Quinn",
     "strength": 3,
     "objectivLocation":[{
-        "xPos": 3,
-        "yPos": 2
+        "xPos": 1,
+        "yPos": 4
     },
     {
-        "xPos": 5,
-        "yPos": 7
+        "xPos": 8,
+        "yPos": 0
     }],
     "story": "Harley Quinn is making a name for herself in the villian community after leaving the Joker."
 },

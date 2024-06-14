@@ -32,12 +32,12 @@
             <Font name="DIN Alternate Bold" size="29.0" />
          </font>
       </Button>
-      <Label layoutX="116.0" layoutY="86.0" prefHeight="61.0" prefWidth="74.0" text="YOU" textFill="WHITE">
+      <Label layoutX="116.0" layoutY="86.0" prefHeight="62.0" prefWidth="100.0" text="YOU" textFill="WHITE">
          <font>
             <Font name="DIN Alternate Bold" size="41.0" />
          </font>
       </Label>
-      <Label layoutX="105.0" layoutY="148.0" prefHeight="61.0" prefWidth="99.0" text="WIN!!" textFill="WHITE">
+      <Label layoutX="104.0" layoutY="148.0" prefHeight="62.0" prefWidth="146.0" text="WIN!!" textFill="WHITE">
          <font>
             <Font name="DIN Alternate Bold" size="41.0" />
          </font>

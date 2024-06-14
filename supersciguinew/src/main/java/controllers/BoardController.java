@@ -75,6 +75,7 @@ public class BoardController {
     public boolean spedFalse = false;
     public int time = 0;
     public String answer;
+    public int harles = 1;
     
 
     @FXML
@@ -87,6 +88,7 @@ public class BoardController {
         checkWeapon();
         checkQuinn();
         checkVictory();
+        showHarley();
     } 
 
     @FXML
@@ -99,6 +101,7 @@ public class BoardController {
         checkWeapon();
         checkQuinn();
         checkVictory();
+        showHarley();
     } 
 
     @FXML
@@ -111,6 +114,7 @@ public class BoardController {
         checkWeapon();
         checkQuinn();
         checkVictory();
+        showHarley();
     } 
 
     @FXML
@@ -123,6 +127,7 @@ public class BoardController {
         checkWeapon();
         checkQuinn();
         checkVictory();
+        showHarley();
     } 
 
     public void checkQuinn() throws IOException
@@ -131,13 +136,17 @@ public class BoardController {
         {
             gm.villainTurn();
             board_grid.getChildren().remove(harley_on);
-            board_grid.add(harley_on, gm.board.villainLocation.xPos, 8-gm.board.villainLocation.yPos);
+            harles = 0;
+            System.out.println("hidden");
+            showHarley();
         }
         else if (spedFalse == false && gm.hero.hasMove() == true)
         {
             gm.villainTurn();
             board_grid.getChildren().remove(harley_on);
-            board_grid.add(harley_on, gm.board.villainLocation.xPos, 8-gm.board.villainLocation.yPos);
+            harles = 0;
+            System.out.println("hidden");
+            showHarley();
             spedFalse = true;
         }
         else if (spedFalse == true && gm.hero.hasMove() == true)
@@ -238,9 +247,9 @@ public class BoardController {
         qButton.setTranslateX(100);
         qButton.setTranslateY(-900);
         VboX.getChildren().add(qAnswer);
-        qAnswer.setTranslateX(-270);
+        qAnswer.setTranslateX(-130);
         qAnswer.setTranslateY(-970);
-        qAnswer.setScaleX(0.2);
+        qAnswer.setScaleX(0.5);
     }
 
     @FXML
@@ -292,7 +301,19 @@ public class BoardController {
         VboX.getChildren().remove(qAnswer);
     }
 
+    public void showHarley()
+    {
+        //board_grid.getChildren().remove(harley_on);
+        if (harles == 0 && gm.showVillainLocation(robX, robY))
+        {  
+            System.out.println("shown");
+            board_grid.add(harley_on, gm.board.villainLocation.xPos, 8-gm.board.villainLocation.yPos);
+            harles = 1;
+        }
+    }
+
 }
+
 
 
 
