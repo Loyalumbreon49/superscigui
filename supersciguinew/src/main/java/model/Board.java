@@ -52,8 +52,7 @@ public class Board {
             int xPos = rand.nextInt(8);
             int yPos = rand.nextInt(8);
             weapons.add (new Location(xPos, yPos));
-            if(index > 1 && weapons.get(index).xPos==weapons.get(index-1).xPos 
-            && weapons.get(index).yPos==weapons.get(index-1).yPos)
+            while(locations.get(xPos).get(yPos).isWeapon())
             {
                 int newXPos = rand.nextInt(8);
                 int newYPos = rand.nextInt(8);

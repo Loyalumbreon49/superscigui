@@ -42,9 +42,6 @@ public class BoardController {
     private ImageView staff = new ImageView();
 
     @FXML
-    private ImageView staff_one = new ImageView();
-
-    @FXML
     private Label rob_info;
 
     @FXML
@@ -68,6 +65,21 @@ public class BoardController {
     @FXML
     private Button qButton;
 
+    @FXML
+    private ImageView staff_a = new ImageView();
+
+    @FXML
+    private ImageView staff_b = new ImageView();
+
+    @FXML
+    private ImageView staff_c = new ImageView();
+
+    @FXML
+    private ImageView staff_d = new ImageView();
+
+    @FXML
+    private Label har_str;
+
     
 
     public int robX = 4; 
@@ -76,6 +88,14 @@ public class BoardController {
     public int time = 0;
     public String answer;
     public int harles = 1;
+    public int staffX = 0;
+    public int staffY = 0;
+    public int staX = 0;
+    public int staY = 0;
+    public int stbX = 0;
+    public int stbY = 0;
+    public int stcX = 0;
+    public int stcY = 0;
     
 
     @FXML
@@ -193,6 +213,8 @@ public class BoardController {
     }
 
     public void initiate() {
+        int str = 0;
+        har_str.setText("Strength: " + gm.level.getVillain().getStrength());
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 8; j++)
@@ -208,21 +230,66 @@ public class BoardController {
                         board_grid.add(hook, i, j);
                         time++;
                     }
-                    if (effective.equals("strength"))
+                    else if (effective.equals("strength") && str == 0)
                     {
+                        staffX = i;
+                        staffY = j;
                         staff.setImage(new Image(getClass().getResourceAsStream("/images/staff.jpg")));
                         staff.setFitWidth(50);
                         staff.setFitHeight(50);
                         board_grid.add(staff, i, j);
                         time++;
+                        str++;
                     }
-                    if (effective.equals("intel"))
+                    else if (effective.equals("intel"))
                     {
                         birdarang.setImage(new Image(getClass().getResourceAsStream("/images/birdarang.png")));
                         birdarang.setFitWidth(50);
                         birdarang.setFitHeight(50);
                         board_grid.add(birdarang, i, j);
                         time++;
+                    }
+                    else if (effective.equals("strength") && str == 1)
+                    {
+                        staX = i;
+                        staY = j;
+                        staff_a.setImage(new Image(getClass().getResourceAsStream("/images/staff.jpg")));
+                        staff_a.setFitWidth(50);
+                        staff_a.setFitHeight(50);
+                        board_grid.add(staff_a, i, j);
+                        time++;
+                        str++;
+                    }
+                    else if (effective.equals("strength") && str == 2)
+                    {
+                        stbX = i;
+                        stbY = j;
+                        staff_b.setImage(new Image(getClass().getResourceAsStream("/images/staff.jpg")));
+                        staff_b.setFitWidth(50);
+                        staff_b.setFitHeight(50);
+                        board_grid.add(staff_b, i, j);
+                        time++;
+                        str++;
+                    }
+                    else if (effective.equals("strength") && str == 3)
+                    {
+                        stcX = i;
+                        stcY = j;
+                        staff_c.setImage(new Image(getClass().getResourceAsStream("/images/staff.jpg")));
+                        staff_c.setFitWidth(50);
+                        staff_c.setFitHeight(50);
+                        board_grid.add(staff_c, i, j);
+                        time++;
+                        str++;
+                    }
+                    else if (effective.equals("strength") && str == 4)
+                    {
+                        staff_d.setImage(new Image(getClass().getResourceAsStream("/images/staff.jpg")));
+                        staff_d.setFitWidth(50);
+                        staff_d.setFitHeight(50);
+                        board_grid.add(staff_d, i, j);
+                        time++;
+                        str++;
                     }
                 }
             }
@@ -247,9 +314,9 @@ public class BoardController {
         qButton.setTranslateX(100);
         qButton.setTranslateY(-900);
         VboX.getChildren().add(qAnswer);
-        qAnswer.setTranslateX(-130);
+        qAnswer.setTranslateX(-30);
         qAnswer.setTranslateY(-970);
-        qAnswer.setScaleX(0.5);
+        qAnswer.setScaleX(0.75);
     }
 
     @FXML
@@ -282,8 +349,27 @@ public class BoardController {
                 }
                 if (effective.equals("strength"))
                 {
-                    board_grid.getChildren().remove(staff);
-                    rob_strength.setText("Strength: 4");
+                    if (robX == staffX && robY == staffY)
+                    {
+                        board_grid.getChildren().remove(staff);
+                    }
+                    else if (robX == staX && robY == staY)
+                    {
+                        board_grid.getChildren().remove(staff_a);
+                    }
+                    else if (robX == stbX && robY == stbY)
+                    {
+                        board_grid.getChildren().remove(staff_b);
+                    }
+                    else if (robX == stcX && robY == stcY)
+                    {
+                        board_grid.getChildren().remove(staff_c);
+                    }
+                    else 
+                    {
+                        board_grid.getChildren().remove(staff_d);
+                    }
+                    rob_strength.setText("Strength: " + gm.hero.getStrength());
                 }
                 if (effective.equals("intel"))
                 {
