@@ -50,4 +50,9 @@ public class Location implements Serializable {
             return false;
         }
     }
+
+    public void removeWeapon()
+    {
+        weapon = null;
+    }
 }

@@ -21,6 +21,27 @@
     "answers": ["square", "octagon", "triangle"]
 },
 {
+    "difficulty": 1,
+    "subject": "math",
+    "question": "I have two apples. I give one away. How many apples do I have?",
+    "correctAnswer": "1",
+    "answers":["10", "13", "24"]
+},
+{
+    "difficulty": 1,
+    "subject": "math",
+    "question": "What is three times three?",
+    "correctAnswer": "9",
+    "answers": ["44", "58", "23"]
+},
+{
+    "difficulty": 1,
+    "subject": "math",
+    "question": "How many feet are in a yard",
+    "correctAnswer": "3",
+    "answers": ["square", "octagon", "triangle"]
+},
+{
     "difficulty": 2,
     "subject": "math",
     "question": "What is 12 x 2?",

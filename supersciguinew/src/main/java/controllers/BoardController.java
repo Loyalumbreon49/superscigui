@@ -188,7 +188,7 @@ public class BoardController {
     {
         if (gm.board.locations.get(robX).get(robY).isWeapon())
         {
-            askQuestion();            
+            askQuestion();           
         }
     }
 
@@ -289,7 +289,7 @@ public class BoardController {
                 {
                     board_grid.getChildren().remove(birdarang);
                 }
-            gm.board.heroLocation.weapon = null;
+            gm.board.locations.get(robX).get(robY).removeWeapon(); 
             qHide();
     }
 

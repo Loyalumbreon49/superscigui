@@ -178,7 +178,7 @@ public class DataLoader {
         }
     }*/
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         System.out.println("None");
         getUsers("json/Users.json");
         System.out.println("User");
@@ -189,5 +189,5 @@ public class DataLoader {
         System.out.println("Hero");
         getVillains("json/Villains.json");
         System.out.println("Vilain");
-    }
+    }*/
 }
