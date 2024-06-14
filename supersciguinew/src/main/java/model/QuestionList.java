@@ -41,7 +41,7 @@ public class QuestionList {
      */
     public Question getQuestion(int difficulty)
     {
-        Question myQuestion = questions.get(difficulty).get(rand.nextInt(3));
+        Question myQuestion = questions.get(difficulty).get(rand.nextInt(6));
         return myQuestion;
     }
 
