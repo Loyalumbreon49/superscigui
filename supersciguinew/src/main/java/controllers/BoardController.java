@@ -14,12 +14,13 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import model.Question;
+import model.SuperSci;
 import supersci.gui.App;
 
 public class BoardController {
 
-    model.GameManager gm = new model.GameManager();
-    
+    model.GameManager gm = new model.GameManager(SuperSci.getUser());
+
     @FXML
     private VBox VboX;
 
@@ -80,7 +81,7 @@ public class BoardController {
     @FXML
     private Label har_str;
 
-    
+
 
     public int robX = 4; 
     public int robY = 8;
@@ -187,7 +188,8 @@ public class BoardController {
         {
             if (gm.fightVillain()) 
             {
-                App.setRoot("win");
+                SuperSci.getUser().getLevel().nextLevel();
+                App.setRoot("board");
             }
             else{
                 App.setRoot("lose");
@@ -399,9 +401,3 @@ public class BoardController {
     }
 
 }
-
-
-
-
-
-

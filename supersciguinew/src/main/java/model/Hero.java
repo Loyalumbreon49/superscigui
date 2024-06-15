@@ -73,7 +73,6 @@ public class Hero implements Serializable {
 
     /**
      * Adds a weapon to the list of collected weapons
-     * @param weapon Holds the weapon name and its effect
      */
     public void addWeapon(Weapon weapon) {
         collectedWeapons.add(weapon);
@@ -81,10 +80,6 @@ public class Hero implements Serializable {
             strength += 2;
     }
 
-    /**
-     * Gives the description of the hero
-     * @return Will return information about the current hero
-     */
     public String getDescription() {
         return name + ": \nStrength: " + strength + "\nSubject: " + subject
                 + "\nAll Weapons: " + weapons + "\nCollected Weapons: " + collectedWeapons + "\nStory: " + story;
@@ -93,27 +88,18 @@ public class Hero implements Serializable {
     public boolean hasMove() 
     {
         boolean check = false;
-        //Iterator<Weapon> iterator = weapons.iterator();
         int index = 0;
         for(int i = 0; i < collectedWeapons.size(); i++)
         {
             if(collectedWeapons.get(i).getEffect().equalsIgnoreCase("move")) {
                 check = true;
             }
-
         }
-        /*while (iterator.hasNext())
-        {
-            if(collectedWeapons.get(index).getEffect().equalsIgnoreCase("move"))
-                check = true;
-            ++index;
-        }*/
         return check;
     }
 
     public boolean hasIntel() {
         boolean check = false;
-        //Iterator<Weapon> iterator = weapons.iterator();
         int index = 0;
         for(int i = 0; i < collectedWeapons.size(); i++)
         {
@@ -122,16 +108,7 @@ public class Hero implements Serializable {
             }
 
         }
-
         return check;
     }
 
-    public boolean hasStrength() {
-        for (Weapon weapon : collectedWeapons) {
-            if (weapon.getEffect().equalsIgnoreCase("strength")) {
-                return true;
-            }
-        }
-        return false;
-    }
 }

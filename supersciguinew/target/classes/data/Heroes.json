@@ -19,54 +19,54 @@
 },
 {
     "subject": "Riddles",
-    "name" : "Scarlett Witch",
+    "name" : "Atom Eve",
     "weapons":[{
-        "weaponName": "magic ability",
+        "weaponName": "She Can Fly",
         "effect": "move"
     },
     {
-        "weaponName": "the darkhold",
+        "weaponName": "Wicked Intelligence",
         "effect": "intel"
     },
     {
-        "weaponName": "hex bolt",
+        "weaponName": "Matter Shift",
         "effect": "strength"
     }],
     "strength": 2,
-    "story": "Scarlett Witch, also known as Wanda Maximoff, got her magic powers from an infinity stone."
+    "story": "With immense power over atomic structures, Atom Eve worked with her powers to reshape the world."
 },
 {
     "subject": "Science",
-    "name": "Wonder Woman",
+    "name": "Danny Phantom",
     "weapons": [{
-        "weaponName": "lasso",
+        "weaponName": "Ghost Sense",
         "effect": "intel"
     },
     {
-        "weaponName": "sheild",
+        "weaponName": "Plasma Blasts",
         "effect": "strength"
     },
     {
-        "weaponName": "bracelets",
+        "weaponName": "Intangability",
         "effect": "move"
     }],
     "strength": 2,
-    "story": "Wonder Woman was molded from clay by her mother, and given life by Zeus."
+    "story": "Danny Fentin was just a normal boy with scientist parents until a lab accident turned him into the half-ghost superhero, Danny Phantom."
 
 },
 {
     "subject": "English",
-    "name": "Deadpool",
+    "name": "Kim Possible",
     "weapons":[{
-        "weaponName":"katana",
+        "weaponName":"Rupert?",
         "effect" : "strength"
     },
     {
-        "weaponName": "handgun",
+        "weaponName": "Wade",
         "effect": "intel"
     },
     {
-        "weaponName": "submachine guns",
+        "weaponName": "Grappling Hook",
         "effect": "move"
     }],
     "strength": 2,
@@ -74,20 +74,20 @@
 },
 {
     "subject": "Social Studies",
-    "name": "Batman",
+    "name": "Spiderman",
     "weapons":[{
-        "weaponName": "batclaw",
+        "weaponName": "Web Slinger",
         "effect": "move"
     },
     {
-        "weaponName": "batarang",
+        "weaponName": "Spider Sense",
         "effect": "strength"
     },
     {
-        "weaponName": "batlight",
+        "weaponName": "Karen",
         "effect": "intel"
     }],
     "strength": 2,
-    "story": "Batman, also known as Bruce Wayne, saw his parents killed as a boy and is now the most notable vigilante in Gotham."
+    "story": "After being bit by a radioactive spider, Peter Parker became your friendly neighborhood Spiderman."
 }
 ]

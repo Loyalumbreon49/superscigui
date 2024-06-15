@@ -19,7 +19,6 @@ public class UserList {
 
     /**
      * Returns the singleton instance of the UserList.
-     * @return The single, static instance of the UserList.
      */
     public static synchronized UserList getInstance() {
         if (instance == null) {
@@ -50,9 +49,10 @@ public class UserList {
                 return false;
             }
         }
-        User newUser = new User(UUID.randomUUID(), userName, password, phoneNumber, email);
+        User newUser = new User(UUID.randomUUID(), userName, password, phoneNumber, email, new Level(1));
         users.add(newUser);
-        DataReader.saveUsers(users, "json/Users.json");
+        System.out.println("new user");
+        DataReader.saveUsers(users, "supersciguinew/src/main/java/data/testWriter.json");
         return true;
     }
 
@@ -71,19 +71,19 @@ public class UserList {
      * @param password The password for login attempt.
      * @return true if credentials are valid, false otherwise.
      */
-    public boolean login(String userName, String password) {
+    public User login(String userName, String password) {
         if (userName == null || password == null) {
-            return false;
+            return null;
         }
 
         for (User user : users) {
             if (userName.equals(user.getUserName()) && password.equals(user.getPassword())) {
                 System.out.println("Login successful.");
-                return true;
+                return user;
             }
         }
         System.out.println("Login failed.");
-        return false;
+        return null;
     }
 
     /**
@@ -104,73 +104,4 @@ public class UserList {
         return null;
     }
 
-    /**
-     * Main method to interactively test the account creation and login functionality using console input.
-     * @param args Command line arguments, not used.
-     */
-    public static void main(String[] args) {
-        UserList userList = UserList.getInstance();
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            System.out.println("Choose an option: [1] Create Account, [2] Login, [3] Exit");
-            int choice = Integer.parseInt(scanner.nextLine());
-
-            switch (choice) {
-                case 1: // Create account
-                    System.out.println("Enter username (case-sensitive):");
-                    String userName = scanner.nextLine();
-
-                    String password;
-                    do {
-                        System.out.println("Enter password (case-sensitive, at least 6 characters, must include special characters !@#$%&*):");
-                        password = scanner.nextLine();
-                        if (!isValidPassword(password)) {
-                            System.out.println("Invalid password. Try again.");
-                        }
-                    } while (!isValidPassword(password));
-
-                    System.out.println("Enter phone number (format ###-###-####):");
-                    String phone = scanner.nextLine();
-                    System.out.println("Enter email:");
-                    String email = scanner.nextLine();
-
-                    boolean added = userList.createAccount(userName, password, phone, email);
-                    if (added) {
-                        System.out.println("Account created successfully.");
-                    } else {
-                        System.out.println("Failed to create account.");
-                    }
-                    break;
-                case 2: // Login
-                    System.out.println("Enter username:");
-                    String loginUserName = scanner.nextLine();
-                    int attempts = 4;
-
-                    while (attempts > 0) {
-                        System.out.println("Enter password (Attempts left: " + attempts + "):");
-                        String loginPassword = scanner.nextLine();
-                        if (userList.login(loginUserName, loginPassword)) {
-                            break;
-                        } else {
-                            attempts--;
-                        }
-                    }
-
-                    if (attempts == 0) {
-                        System.out.println("Too many failed attempts. Exiting program.");
-                        scanner.close();
-                        return;
-                    }
-                    break;
-                case 3: // Exit
-                    System.out.println("Exiting program.");
-                    scanner.close();
-                    return;
-                default:
-                    System.out.println("Invalid option. Please try again.");
-                    break;
-            }
-        }
-    }
 }

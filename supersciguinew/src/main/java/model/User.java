@@ -35,13 +35,13 @@ public class User implements Serializable {
      * @param phoneNumber Phone number of the user.
      * @param email Email address of the user.
      */
-    public User(UUID id, String userName, String password, String phoneNumber, String email) {
+    public User(UUID id, String userName, String password, String phoneNumber, String email, Level l) {
         this.id = id;
         this.userName = userName;
         this.password = password;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.level = null;
+        this.level = l;
         this.hero = null;
     }
 

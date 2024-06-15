@@ -7,8 +7,8 @@ public class Level {
     private ArrayList<Villain> villains;
     private ArrayList<Hero> heroes;
 
-    public Level() {
-        levelNumber = 1;
+    public Level(int num) {
+        levelNumber = num;
         heroes = DataLoader.getHeroes("supersciguinew/src/main/java/data/Heroes.json");
         villains = DataLoader.getVillains("supersciguinew/src/main/java/data/Villains.json");
     }

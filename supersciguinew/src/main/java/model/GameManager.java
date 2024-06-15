@@ -15,9 +15,9 @@ public class GameManager{
     public int objectivesCaptured;
     public QuestionList questions;
 
-    public GameManager(){
-        level = new Level();
-        hero = null;
+    public GameManager(User user){
+        level = user.getLevel();
+        hero = user.getHero();
         moveScanner = new Scanner(System.in);
 
         hero = level.getHero();

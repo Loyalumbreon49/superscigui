@@ -3,6 +3,8 @@ public class SuperSci {
     private UserList users;
     private GameManager gameManager;
     private Hero hero;
+    private static SuperSci instance;
+    private static User myUser;
     //private User currentUser;
 
     public SuperSci(UserList users) {
@@ -17,7 +19,13 @@ public class SuperSci {
      * @return true if the login is successful, false otherwise.
      */
     public boolean login(String userName, String password, UserList userlist) {
-        return userlist.login(userName, password);
+        myUser = userlist.login(userName, password);
+        return (userlist.login(userName, password) != null);
+    }
+
+    public static User getUser()
+    {
+        return myUser;
     }
 
     public boolean createAccount(String userName, String password, String phoneNumber, String email, UserList userList)
@@ -25,26 +33,21 @@ public class SuperSci {
         return userList.createAccount(userName, password, phoneNumber, email);
     }
 
+    public static synchronized SuperSci getInstance() {
+        if (instance == null) {
+            instance = new SuperSci(UserList.getInstance());
+        }
+        return instance;
+    }
+
     /**
      * Starts the game session.
      */
     public void play() {
-        this.gameManager = new GameManager();
+        this.gameManager = new GameManager(myUser);
         if (this.hero != null) {
             gameManager.gameRun();
         }
     }
 
-    public static void main(String[] args) {
-        UserList userList = UserList.getInstance();
-        SuperSci fleck = new SuperSci(userList);
-
-        // Simulate a login for testing purposes
-        fleck.login("keving3", "password", userList);   
-        fleck.login("arcSky", "ajG", userList);
-
-        fleck.hero = HeroList.getInstance().getHero("Robin");
-        fleck.play();
-    }
-    
 }

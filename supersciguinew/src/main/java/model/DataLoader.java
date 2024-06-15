@@ -96,15 +96,10 @@ public class DataLoader {
                 String userName = (String)personJSON.get("userName");
                 String phoneNumber = (String)personJSON.get("phoneNumber");
                 String email = (String)personJSON.get("email");
+                String password = (String)personJSON.get("password");
                 //String heroName = (String)personJSON.get("hero");
-                if (userName.equals(""))
-                {
-                    users.add(new User(id, userName, "", phoneNumber, email));
-                }
-                else
-                {
-                    users.add(new User(id, userName, "password", phoneNumber, email));
-                }
+                //int level = ((Long)personJSON.get("level")).intValue();
+                users.add(new User(id, userName, password, phoneNumber, email));
             }
             
             return users;

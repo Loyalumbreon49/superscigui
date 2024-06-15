@@ -49,6 +49,7 @@ public class LoginController {
             return;
         }
         System.out.println("Login Complete");
+        System.out.println(SuperSci.getUser().getUserName());
         App.setRoot("play_screen");
     }
 

@@ -13,68 +13,68 @@
     "story": "Harley Quinn is making a name for herself in the villian community after leaving the Joker."
 },
 {
-    "name": "Thanos",
-    "strength": 11,
-    "objectivLocation": [{
-        "xPos": 8,
-        "yPos": 3
-    },
-    {
-        "xPos": 2,
-        "yPos": 7
-    }],
-    "story": "Thanos is back after being defeated by the Avengers to set balance to the Earth."
-},
-{
-    "name": "Joker",
-    "strength": 11,
-    "objectivLocation": [{
-        "xPos": 7,
-        "yPos": 7
-    },
-    {
-        "xPos": 5,
-        "yPos": 5
-    }],
-    "story": "The Joker's origin is somewhat of a mystery, although it's known that he fell into a vat of chemicals. He's been after Batman ever since."
-},
-{
-    "name": "Agatha Harkness",
-    "strength": 7,
-    "objectivLocation": [{
-        "xPos": 3,
-        "yPos": 3
-    },
-    {
-        "xPos": 7,
-        "yPos": 5
-    }],
-    "story": "Agatha Harkness was accused of practicing dark magic by her coven hundreds of years ago in Salem, sensing the Scarlett Witch's magic she had to come."
-},
-{
-    "name": "Poison Ivy",
-    "strength": 7,
-    "objectivLocation": [{
-        "xPos": 6,
+    "name": "Dead Ringer",
+    "strength": 3,
+    "objectivLocation":[{
+        "xPos": 1,
         "yPos": 4
     },
     {
-        "xPos": 1,
-        "yPos":7
+        "xPos": 8,
+        "yPos": 0
     }],
-    "story": "Poison Ivy, also know as Pamela Isley, is plant enthusiast turned super villian who got her plant powers from some experiments."
+    "story": "Firebrand."
+},
+{
+    "name": "Embyr Mclain",
+    "strength": 5,
+    "objectivLocation":[{
+        "xPos": 1,
+        "yPos": 4
+    },
+    {
+        "xPos": 8,
+        "yPos": 0
+    }],
+    "story": "Danny Phantom."
 },
 {
     "name": "Venom",
-    "strength": 9,
-    "objectivLocation": [{
-        "xPos": 5,
-        "yPos": 2
+    "strength": 7,
+    "objectivLocation":[{
+        "xPos": 1,
+        "yPos": 4
     },
     {
-        "xPos": 3,
-        "yPos": 7
+        "xPos": 8,
+        "yPos": 0
     }],
-    "story": "Venom is a symbiote from planet Klyntar who merged with Eddie Brock after coming to Earth."
+    "story": "Spooderboi."
+},
+{
+    "name": "Shego",
+    "strength": 9,
+    "objectivLocation":[{
+        "xPos": 1,
+        "yPos": 4
+    },
+    {
+        "xPos": 8,
+        "yPos": 0
+    }],
+    "story": "Kim"
+},
+{
+    "name": "Him",
+    "strength": 11,
+    "objectivLocation":[{
+        "xPos": 1,
+        "yPos": 4
+    },
+    {
+        "xPos": 8,
+        "yPos": 0
+    }],
+    "story": "Power Puff Girls!"
 }
 ]
