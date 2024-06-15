@@ -64,6 +64,7 @@ public class GameManager{
                 {
                     hero.setStrength(hero.getStrength()+2);
                 }
+                System.out.println(board.heroLocation.weapon.getName());
                 board.heroLocation.weapon = null;
             }
         }
@@ -102,7 +103,7 @@ public class GameManager{
         }
         J.xPos = xJ;
         J.yPos = yJ;
-        //System.out.println(J);
+        System.out.println(J);
         System.out.println("\nYour Location: " + board.heroLocation);
     }
 
