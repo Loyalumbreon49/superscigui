@@ -1,4 +1,5 @@
 package model;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //Ronnie Rkmp
@@ -18,9 +19,12 @@ public class GameManager{
     public GameManager(User user){
         level = user.getLevel();
         hero = user.getHero();
-        moveScanner = new Scanner(System.in);
 
+        moveScanner = new Scanner(System.in);
+        
         hero = level.getHero();
+        hero.setStrength(2);
+        hero.collectedWeapons = new ArrayList<Weapon>();
         System.out.println(hero.getDescription());
         villain = level.getVillain();
         System.out.println(villain.getDescription());

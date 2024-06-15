@@ -98,8 +98,8 @@ public class DataLoader {
                 String email = (String)personJSON.get("email");
                 String password = (String)personJSON.get("password");
                 //String heroName = (String)personJSON.get("hero");
-                //int level = ((Long)personJSON.get("level")).intValue();
-                users.add(new User(id, userName, password, phoneNumber, email));
+                Level level = new Level(((Long)personJSON.get("level")).intValue());
+                users.add(new User(id, userName, password, phoneNumber, email, level));
             }
             
             return users;

@@ -59,7 +59,7 @@ public class DataReader {
 		userDetails.put("email", user.getEmail());
 		userDetails.put("hero", user.getHero());
 		userDetails.put("password", user.getPassword());
-        userDetails.put("level", user.getLevel());
+        userDetails.put("level", user.getLevel().getLevelNumber());
         
         return userDetails;
 	}

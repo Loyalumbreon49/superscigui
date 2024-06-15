@@ -188,6 +188,8 @@ public class BoardController {
         {
             if (gm.fightVillain()) 
             {
+                robX = 4;
+                robY = 0;
                 SuperSci.getUser().getLevel().nextLevel();
                 App.setRoot("board");
             }
