@@ -4,10 +4,9 @@ package model;
  * @author Amaya Shabazz
  */
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Random;
 public class QuestionList {
-    private HashMap<Integer, ArrayList<Question>> questions;
+    private ArrayList<ArrayList<Question>> questions;
     Random rand = new Random();
     private static QuestionList questionList;
 
@@ -18,6 +17,7 @@ public class QuestionList {
     private QuestionList(String subject)
     {
         questions = DataLoader.getQuestions("supersciguinew/src/main/java/data/Questions.json", subject);
+        System.out.println(questions);
     }
     
     /**

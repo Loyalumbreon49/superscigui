@@ -63,17 +63,38 @@
     "answers": ["4", "6", "0"]
 },
 {
+    "difficulty": 2,
+    "subject": "math",
+    "question": "What is 6^2?",
+    "correctAnswer": "36",
+    "answers": ["34", "14", "44"]
+},
+{
+    "difficulty": 2,
+    "subject": "math",
+    "question": "What is a quarter of 60?",
+    "correctAnswer": "15",
+    "answers": ["2", "6", "7"]
+},
+{
+    "difficulty": 2,
+    "subject": "math",
+    "question": "What is 9 + 10?",
+    "correctAnswer": "19",
+    "answers": ["4", "6", "0"]
+},
+{
     "difficulty": 3,
     "subject": "math",
-    "question": "Gemma has 130 beads for bracelets. She gives 75 beads to Piper and 6 beads to Claire. Which expression shows how to find the total number of beads Gemma has left?",
-    "correctAnswer": "130-75-6",
+    "question": "Gemma has 130 beads for bracelets. She gives 75 beads to Piper. Which expression shows how to find the total number of beads Gemma has left?",
+    "correctAnswer": "130-75",
     "answers": ["130-75+6", "75+6-130", "130+75+6"]
 },
 {
     "difficulty": 3,
     "subject": "math",
-    "question": "What is 64 x 3",
-    "correctAnswer": "192",
+    "question": "What is 12 x 3",
+    "correctAnswer": "36",
     "answers": ["252", "128", "189"]
 },
 {
@@ -81,6 +102,111 @@
     "subject": "math",
     "question": "Mariela has 8 pages of math homework. There are 4 problems on each page. How many total problems does Mariela have for math homework?",
     "correctAnswer": "32",
+    "answers": ["16", "36", "24"]
+},
+{
+    "difficulty": 3,
+    "subject": "math",
+    "question": "What is the square root of 100",
+    "correctAnswer": "10",
+    "answers": ["130-75+6", "75+6-130", "130+75+6"]
+},
+{
+    "difficulty": 3,
+    "subject": "math",
+    "question": "What is 7 * 11",
+    "correctAnswer": "77",
+    "answers": ["252", "128", "189"]
+},
+{
+    "difficulty": 3,
+    "subject": "math",
+    "question": "What is the value of the following expression: 7(2+1)",
+    "correctAnswer": "21",
+    "answers": ["16", "36", "24"]
+},
+{
+    "difficulty": 4,
+    "subject": "math",
+    "question": "What is the value of 12 squared?",
+    "correctAnswer": "144",
+    "answers": ["130-75+6", "75+6-130", "130+75+6"]
+},
+{
+    "difficulty": 4,
+    "subject": "math",
+    "question": "What is 14 * 3",
+    "correctAnswer": "42",
+    "answers": ["252", "128", "189"]
+},
+{
+    "difficulty": 4,
+    "subject": "math",
+    "question": "Jason has 12 lightning bolts. If he gives six to percy, what decimal value represents the fraction of lightning bolts Jason has left?",
+    "correctAnswer": "0.5",
+    "answers": ["16", "36", "24"]
+},
+{
+    "difficulty": 4,
+    "subject": "math",
+    "question": "What is the square root of 121",
+    "correctAnswer": "11",
+    "answers": ["130-75+6", "75+6-130", "130+75+6"]
+},
+{
+    "difficulty": 4,
+    "subject": "math",
+    "question": "What is the value of the following expression: 9/(3*1)",
+    "correctAnswer": "3",
+    "answers": ["252", "128", "189"]
+},
+{
+    "difficulty": 4,
+    "subject": "math",
+    "question": "What is the value of the following expression: 7+2*3",
+    "correctAnswer": "13",
+    "answers": ["16", "36", "24"]
+},
+{
+    "difficulty": 5,
+    "subject": "math",
+    "question": "If Jerico has 14 cm of thread, how many meters of thread does he have? Answer in the form of a decimal.",
+    "correctAnswer": "0.14",
+    "answers": ["130-75+6", "75+6-130", "130+75+6"]
+},
+{
+    "difficulty": 5,
+    "subject": "math",
+    "question": "What is the value of pi to 2 decimal points?",
+    "correctAnswer": "3.14",
+    "answers": ["252", "128", "189"]
+},
+{
+    "difficulty": 5,
+    "subject": "math",
+    "question": "What is the value of the following expression: 2+1(3+16/4)+2^2",
+    "correctAnswer": "13",
+    "answers": ["16", "36", "24"]
+},
+{
+    "difficulty": 5,
+    "subject": "math",
+    "question": "What is 5% of 60?",
+    "correctAnswer": "3",
+    "answers": ["130-75+6", "75+6-130", "130+75+6"]
+},
+{
+    "difficulty": 5,
+    "subject": "math",
+    "question": "Danny has 7 coins. If the total value of his coins is $0.88, how many quarters does Danny have?",
+    "correctAnswer": "3",
+    "answers": ["252", "128", "189"]
+},
+{
+    "difficulty": 5,
+    "subject": "math",
+    "question": "What is the value of 19*13?",
+    "correctAnswer": "247",
     "answers": ["16", "36", "24"]
 },
 {

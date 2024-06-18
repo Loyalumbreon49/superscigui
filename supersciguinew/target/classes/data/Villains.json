@@ -1,6 +1,6 @@
 [
 {
-    "name": "Harley Quinn",
+    "name": "Harley",
     "strength": 3,
     "objectivLocation":[{
         "xPos": 1,
@@ -13,28 +13,41 @@
     "story": "Harley Quinn is making a name for herself in the villian community after leaving the Joker."
 },
 {
-    "name": "Dead Ringer",
+    "name": "Ringer",
     "strength": 3,
     "objectivLocation":[{
-        "xPos": 1,
-        "yPos": 4
+        "xPos": 8,
+        "yPos": 1
     },
     {
-        "xPos": 8,
-        "yPos": 0
+        "xPos": 1,
+        "yPos": 4
     }],
     "story": "Firebrand."
 },
 {
-    "name": "Embyr Mclain",
+    "name": "Villain_3",
     "strength": 5,
     "objectivLocation":[{
-        "xPos": 1,
-        "yPos": 4
+        "xPos": 6,
+        "yPos": 2
     },
     {
-        "xPos": 8,
+        "xPos": 2,
         "yPos": 0
+    }],
+    "story": "?."
+},
+{
+    "name": "Embyr",
+    "strength": 5,
+    "objectivLocation":[{
+        "xPos": 4,
+        "yPos": 0
+    },
+    {
+        "xPos": 0,
+        "yPos": 1
     }],
     "story": "Danny Phantom."
 },
@@ -52,6 +65,32 @@
     "story": "Spooderboi."
 },
 {
+    "name": "Villain_6",
+    "strength": 7,
+    "objectivLocation":[{
+        "xPos": 2,
+        "yPos": 5
+    },
+    {
+        "xPos": 7,
+        "yPos": 1
+    }],
+    "story": "?."
+},
+{
+    "name": "Villain_7",
+    "strength": 9,
+    "objectivLocation":[{
+        "xPos": 2,
+        "yPos": 2
+    },
+    {
+        "xPos": 6,
+        "yPos": 6
+    }],
+    "story": "?."
+},
+{
     "name": "Shego",
     "strength": 9,
     "objectivLocation":[{
@@ -65,14 +104,27 @@
     "story": "Kim"
 },
 {
-    "name": "Him",
+    "name": "Villain_9",
     "strength": 11,
     "objectivLocation":[{
-        "xPos": 1,
-        "yPos": 4
+        "xPos": 0,
+        "yPos": 0
     },
     {
         "xPos": 8,
+        "yPos": 0
+    }],
+    "story": "Power Puff Girls!"
+},
+{
+    "name": "Him",
+    "strength": 11,
+    "objectivLocation":[{
+        "xPos": 4,
+        "yPos": 0
+    },
+    {
+        "xPos": 0,
         "yPos": 0
     }],
     "story": "Power Puff Girls!"

@@ -81,6 +81,9 @@ public class BoardController {
     @FXML
     private Label har_str;
 
+    @FXML
+    private Label har_name;
+
 
 
     public int robX = 4; 
@@ -219,6 +222,7 @@ public class BoardController {
     public void initiate() {
         int str = 0;
         har_str.setText("Strength: " + gm.level.getVillain().getStrength());
+        har_name.setText(gm.villain.getName());
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 8; j++)
@@ -311,7 +315,7 @@ public class BoardController {
         VboX.getChildren().add(qAsk);
         qAsk.setTranslateX(100);
         qAsk.setTranslateY(-1000);
-        Question q = gm.questions.getQuestion(1);
+        Question q = gm.questions.getQuestion(gm.level.getLevelNumber()/2 +1);
         qAsk.setText(q.getQuestion());
         answer = q.getAnswer();
         qButton.toFront();

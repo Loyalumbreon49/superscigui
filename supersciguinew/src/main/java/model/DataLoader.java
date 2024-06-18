@@ -111,11 +111,13 @@ public class DataLoader {
         return null;
     }
 
-    public static HashMap<Integer, ArrayList<Question>> getQuestions(String fileName, String math) {
-        HashMap<Integer, ArrayList<Question>> Qs = new HashMap<Integer, ArrayList<Question>>();
-        for (int q=1; q<11; q++)
-            Qs.put(q, new ArrayList<Question>());
-        
+    public static ArrayList<ArrayList<Question>> getQuestions(String fileName, String math) {
+        ArrayList<ArrayList<Question>> Qs = new ArrayList<ArrayList<Question>>();
+        for(int i = 0; i < 11; i++)
+        {
+            Qs.add(new ArrayList<Question>());
+        }
+
         try {
             FileReader reader = new FileReader(fileName);
             JSONArray peopleJSON = (JSONArray)new JSONParser().parse(reader);

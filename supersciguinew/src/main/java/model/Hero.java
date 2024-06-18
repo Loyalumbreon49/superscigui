@@ -88,7 +88,6 @@ public class Hero implements Serializable {
     public boolean hasMove() 
     {
         boolean check = false;
-        int index = 0;
         for(int i = 0; i < collectedWeapons.size(); i++)
         {
             if(collectedWeapons.get(i).getEffect().equalsIgnoreCase("move")) {
@@ -100,7 +99,6 @@ public class Hero implements Serializable {
 
     public boolean hasIntel() {
         boolean check = false;
-        int index = 0;
         for(int i = 0; i < collectedWeapons.size(); i++)
         {
             if(collectedWeapons.get(i).getEffect().equalsIgnoreCase("intel")) {

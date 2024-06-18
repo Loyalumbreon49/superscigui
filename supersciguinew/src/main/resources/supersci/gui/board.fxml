@@ -63,7 +63,7 @@
       </ImageView>
       <Label fx:id="rob_strength" scaleX="2.0" scaleY="2.0" text="Strength: 2" translateX="730.0" translateY="-620.0" />
       <Label fx:id="rob_speed" scaleX="1.5" scaleY="1.5" text="Speed: 1" translateX="732.0" translateY="-610.0" />
-      <Label scaleX="3.0" scaleY="3.0" text="Harley" translateX="740.0" translateY="-570.0" />
+      <Label fx:id="har_name" scaleX="3.0" scaleY="3.0" text="Harley" translateX="740.0" translateY="-570.0" />
       <Label fx:id="har_str" scaleX="2.0" scaleY="2.0" text="Strength: 3" translateX="730.0" translateY="-555.0" />
       <Label fx:id="vil_objectives" scaleX="1.5" scaleY="1.5" text="Objectives: 0" translateX="725.0" translateY="-540.0" />
       <Button fx:id="qButton" mnemonicParsing="false" onAction="#finalize" text="Answer" />
