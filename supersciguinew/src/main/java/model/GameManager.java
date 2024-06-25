@@ -226,7 +226,7 @@ public class GameManager{
     }
 
     /*public static void main(String[] args) {
-        GameManager gm = new GameManager();
+        GameManager gm = new GameManager());
         gm.hero = gm.level.getHero();
         System.out.println(gm.hero.getDescription());
         gm.villain = gm.level.getVillain();
